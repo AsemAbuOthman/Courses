@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Boxing
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> lNumbers = new List<int> { 1, 2, 3, 4, 5};
+
+            //Basic loop Zero-Based-Index
+            Console.WriteLine("Loop Through the List using Basic Loop : ");
+            for (int i = 0; i < lNumbers.Count; i++) 
+            {
+                Console.WriteLine(lNumbers[i]);
+            }
+
+            //Foreach Statment
+            Console.WriteLine("Loop Through the List using Foreach : ");
+            foreach(int i in lNumbers)
+            {
+                Console.WriteLine(i);
+            }
+
+            //Foreach Lambda Expr.
+            Console.WriteLine("Loop Through the List using Foreach Lambda Expr. : ");
+            lNumbers.ForEach(i => Console.WriteLine(i));
+
+            Console.ReadKey();
+
+        }
+    }
+}

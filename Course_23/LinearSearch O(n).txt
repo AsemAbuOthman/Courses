@@ -1,0 +1,47 @@
+namespace Course22
+{
+    internal class Program
+    {
+
+        static int LinearSearch(int[] arr, int x) {
+
+            int n = arr.Length;
+
+            for (int i = 0; i < n; i++) {
+
+                if (arr[i] == x)
+                    return i;
+            }
+
+            return -1;
+        }
+
+        static void Main(string[] args)
+        {
+
+            int[] arr = { 11, 5, 9, 15, -60, 35 };
+            int x = 15;
+
+            Console.Write("Original Array : ");
+            foreach (var item in arr)
+            {
+
+                Console.Write(item + " ");
+            }
+
+            int result = LinearSearch(arr, x);
+
+            if (result == -1)
+            {
+
+                Console.WriteLine("\nElement was not found in the array !");
+            }
+            else { 
+            
+                Console.WriteLine("\nElement found at Index : " + result);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

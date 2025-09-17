@@ -1,0 +1,20 @@
+namespace Course22
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> lstNumbers = new List<int> {44, 22, -55, 666, 9, -6, 345, 11, 3, 3 };
+
+            Console.WriteLine("Is list contains number 666 : " + lstNumbers.Contains(666));
+            Console.WriteLine("\nIs there is list a negative number : "+ lstNumbers.Exists(n => n < 0));// Condition 
+            Console.WriteLine("\nIs there is list a negative number return first item that have that condition in the list : "+ lstNumbers.Find(n => n < 0));// Condition 
+            Console.WriteLine("\nIs there is list a negative number return all list : "+ string.Join(", ", lstNumbers.FindAll(n => n < 0)));// Condition 
+            Console.WriteLine("\nIs there in the list a number greater that 100 return true : "+ lstNumbers.Any(n => n > 100));// Condition 
+
+
+            Console.ReadKey(); 
+        }
+    }
+}

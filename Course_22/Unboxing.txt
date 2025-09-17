@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Boxing
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int valType = 50;
+            object refType = valType; // Boxing
+
+            int unboxedvalType = (int)refType;
+
+            Console.WriteLine($"Unboxed Value from Heap back to Stack : {unboxedvalType}");
+            // Unboxing Converting from Refrence to Value Type
+            Console.ReadKey();
+
+        }
+    }
+}

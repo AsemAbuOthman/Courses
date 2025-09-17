@@ -1,0 +1,56 @@
+namespace Course22
+{
+    internal class Program
+    {
+
+        static int BinarySearch(int[] arr, int x) { // Array must be sorted... 
+
+            int n = arr.Length;
+            int start = 0;
+            int end = n - 1;
+            
+            while (start <= end) {
+
+                int middle = start + (end - start) / 2;
+
+                if (arr[middle] == x)
+                    return middle;
+
+                if (x > arr[middle]) {
+
+                    start = middle + 1;
+                }
+                else {
+
+                    end = middle - 1;
+                }
+
+            }
+
+            return -1;
+        }
+
+        static void Main(string[] args)
+        {
+
+            int[] arr = { 22, 25, 37, 41, 45, 46, 49, 51, 55, 58, 70, 80, 82, 90, 95 }; // Sorted array
+
+            int x = 45; // Element to be searched
+
+            Console.Write("Sorted Array:");
+            foreach (var item in arr)
+                Console.Write(item + " ");
+            Console.WriteLine();
+
+            int result = BinarySearch(arr, x);
+
+            if (result == -1)
+                Console.WriteLine("Element not found in the array.");
+            else
+                Console.WriteLine("Element found at index: " + result);
+
+            Console.ReadKey();
+        }
+    }
+}
+

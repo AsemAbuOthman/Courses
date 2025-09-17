@@ -1,0 +1,21 @@
+title: BoxOffice2
+description: "A website about box office information."
+url: "https://username.github.io"
+baseurl: "/repository-name"  # Leave empty if it's your user page (e.g., https://username.github.io)
+
+# Optional settings
+theme: jekyll-theme-minimal
+exclude:
+  - README.md
+  - LICENSE.md
+
+# Custom settings
+author:
+  name: "Your Name"
+  email: "your-email@example.com"
+
+# Social media links
+social:
+  twitter: "https://twitter.com/username"
+  github: "https://github.com/username"
+  linkedin: "https://linkedin.com/in/username"

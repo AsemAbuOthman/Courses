@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace Boxing
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> lNumbers = new List<int> { 10, -5, 0, 6, 40, 500, -964, 542, 23 };
+
+            lNumbers.Sort();
+            Console.WriteLine($"Sorting elements of the List Ascending : {string.Join(", ", lNumbers)}");
+
+            lNumbers.Reverse();
+            Console.WriteLine($"Sorting elements of the List Descending : {string.Join(", ", lNumbers)}");
+
+            Console.WriteLine($"Sorting elements of the List Ascending using OrderBy : {string.Join(", ", lNumbers.OrderBy(n => n))}");
+            Console.WriteLine($"Sorting elements of the List Descending using OrderByDesending : {string.Join(", ", lNumbers.OrderByDescending(n => n))}");
+
+
+            Console.ReadKey();
+
+        }
+    }
+}

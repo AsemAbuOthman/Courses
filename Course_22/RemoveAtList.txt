@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;//
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Boxing
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<int> lNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+            // Remove item by it value
+            lNumbers.Remove(5);
+            Console.WriteLine($"List Items after remove 5 : {string.Join(",", lNumbers)}");
+
+            // Remove item by it's Index
+            lNumbers.RemoveAt(0);
+            Console.WriteLine($"List Items after remove item at Index 0 : {string.Join(",", lNumbers)}");
+
+            // Remove Multiple Items by Lambda Expr.
+            lNumbers.RemoveAll(n => n % 2 == 0);
+            Console.WriteLine($"List Items after remove all even item  : {string.Join(",", lNumbers)}");
+
+            // Remove all items in the List
+            lNumbers.Clear();
+            Console.WriteLine($"List Items after Clear : {string.Join(",", lNumbers)}");
+
+            Console.ReadKey();
+
+        }
+    }
+}

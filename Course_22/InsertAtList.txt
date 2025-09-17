@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;//
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Boxing
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> lNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            Console.WriteLine($"List Elements : {string.Join(", ", lNumbers)}" );// Print all Elements of a List
+
+            lNumbers.Add(11);
+            Console.WriteLine($"\nList Elements after adding 11 : {string.Join(", ", lNumbers)}");
+
+            lNumbers.Insert(0, 0);
+            Console.WriteLine($"\nList Elements after adding 11 : {string.Join(", ", lNumbers)}");
+
+            lNumbers.InsertRange(0, new List<int> { -2, -1 });// Range of Collection
+            Console.WriteLine($"\nList Elements after adding 11 : {string.Join(", ", lNumbers)}");
+
+            Console.ReadKey();
+
+        }
+    }
+}

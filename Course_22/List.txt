@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;//
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Boxing
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> lNumbers = new List<int>();
+
+            lNumbers.Add(1);
+            lNumbers.Add(2);
+            lNumbers.Add(3);
+            lNumbers.Add(4);
+            lNumbers.Add(5);
+
+            Console.WriteLine("Count Of elements in List : " + lNumbers.Count);
+
+            lNumbers[1] = 500;
+            Console.WriteLine("Change value of element 2 to new value 500 : " + lNumbers[1]);
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
