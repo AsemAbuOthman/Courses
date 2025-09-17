@@ -1,0 +1,418 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cctype>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+enum enTransactionMenuScreen { QuickWithdraw = 1, NormalWithdraw = 2,  DepositeToClient = 3,  TotalBallacne = 4, Logout = 5 };
+
+struct stClientData
+{
+	string PinCode = "";
+	string Name = "";
+	string AccountNumber = "";
+	string Phone = "";
+	float AccountBallance = 0;
+};
+
+void TransactionMenuScreen();
+
+void ShowLoginScreen();
+
+string ReadString(string message)
+{
+	string text = "";
+
+	cout << message;
+
+	getline(cin >> ws, text);
+
+	cout << endl << endl;
+
+	return text;
+}
+
+void ReadDataFromFileToVector(string fileName, vector <string>& vFileContent)
+{
+
+	fstream MyFile;
+
+	MyFile.open(fileName, ios::in);
+
+	if (MyFile.is_open())
+	{
+		string line;
+
+		while (getline(MyFile, line))
+		{
+
+			vFileContent.push_back(line);
+
+		}
+
+		MyFile.close();
+	}
+
+}
+
+vector<string> ReadDataStoreInVector(string lineData, string spreator)
+{
+	vector<string> vData;
+
+	for (short i = 0; i < lineData.length(); i++)
+	{
+		if (lineData[i] == spreator[0])
+		{
+
+			vData.push_back(lineData.substr(0, lineData.find(spreator[0])));
+
+			lineData.erase(0, lineData.find(spreator[0]) + spreator.length());
+
+			i = 0;
+		}
+
+	}
+
+	if (lineData[0] != ' ')
+	{
+		vData.push_back(lineData);
+	}
+
+	return vData;
+}
+
+string JoinString(vector <string> vText, string delim)
+{
+	string result = "";
+
+	for (string& text : vText)
+	{
+		result += text + delim;
+	}
+
+	return result.substr(0, result.length() - delim.length());
+}
+
+
+
+stClientData GetClientData(vector<string> vData)
+{
+	stClientData ClientData;
+
+	ClientData.AccountNumber = vData[0];
+	ClientData.PinCode = vData[1];
+	ClientData.Name = vData[2];
+	ClientData.Phone = vData[3];
+	ClientData.AccountBallance = stof(vData[4]);
+
+	return ClientData;
+}
+
+string ConvertRecordToLine(stClientData ClientData, string spreator = "#//#")
+{
+	string stClientData = "";
+
+	stClientData += ClientData.AccountNumber + spreator;
+	stClientData += ClientData.PinCode + spreator;
+	stClientData += ClientData.Name + spreator;
+	stClientData += ClientData.Phone + spreator;
+	stClientData += to_string(ClientData.AccountBallance);
+
+	return stClientData;
+}
+
+bool DoYouWantToAddMore(char doYouWantToAdd)
+{
+	if (doYouWantToAdd == 'n')
+	{
+		return false;
+	}
+
+	return true;
+}
+
+
+string FindClientData(string accountNumber, stClientData& ClientData)
+{
+	vector<string> vFileContent;
+
+	ReadDataFromFileToVector("MyFile.txt", vFileContent);
+
+	for (short i = 0; i < vFileContent.size(); i++)
+	{
+		ClientData = GetClientData(ReadDataStoreInVector(vFileContent[i], "#//#"));
+
+		if (ClientData.AccountNumber == accountNumber)
+		{
+
+			return vFileContent[i];
+		}
+	}
+
+	return "";
+}
+
+void SaveVectorToFile(string fileName, vector<string>& vNames)
+{
+	fstream MyFile;
+
+	MyFile.open(fileName, ios::out);
+
+	if (MyFile.is_open())
+	{
+
+		for (string& line : vNames)
+		{
+			if (line != " ")
+			{
+				MyFile << line << endl;
+			}
+		}
+
+		MyFile.close();
+	}
+
+}
+
+
+stClientData GetClientData(string accountNumber)
+{
+	vector<string> vFileContent;
+
+	ReadDataFromFileToVector("MyFile.txt", vFileContent);
+
+	stClientData ClientData;
+
+	for (short i = 0; i < vFileContent.size(); i++)
+	{
+		stClientData ClientData = GetClientData(ReadDataStoreInVector(vFileContent[i], "#//#"));
+
+		if (ClientData.AccountNumber == accountNumber)
+		{
+			return ClientData;
+		}
+
+	}
+
+	return ClientData;
+}
+
+void UpdateAccountBallanceOfClinetData(stClientData ClientData, string delim, string fileName, vector<string> vFileContent, string lineData)
+{
+	vector<string> vData;
+
+
+	vData.push_back(ClientData.AccountNumber);
+	vData.push_back(ClientData.PinCode);
+	vData.push_back(ClientData.Name);
+	vData.push_back(ClientData.Phone);
+
+	vData.push_back(to_string(ClientData.AccountBallance));
+
+
+	string newData = JoinString(vData, delim);
+
+
+	for (string& fileContent : vFileContent)
+	{
+		if (fileContent == lineData)
+		{
+			fileContent = newData;
+			break;
+		}
+	}
+
+	SaveVectorToFile(fileName, vFileContent);
+}
+
+void ShowTransactionMenu(short &choice)
+{
+
+	system("cls");
+	cout << "=====================================" << endl;
+	cout << "\t    Transaction Menu Screen" << endl;
+	cout << "=====================================" << endl;
+
+	cout << "\t[1] Quick Withdarw." << endl;
+	cout << "\t[2] Normal Withdraw." << endl;
+	cout << "\t[3] Deposite." << endl;
+	cout << "\t[4] Account Ballance." << endl;
+	cout << "\t[5] Logout." << endl;
+
+
+	cout << "=====================================" << endl;
+	cout << "Choose what do you want to do ? [1 to 5] ? ";
+	cin >> choice;
+	cout << endl;
+
+}
+
+void GoBackToTransactinoMenu()
+{
+	cout << "Press any key to go back to Transaction Menu Screen...";
+	system("pause > 0");
+
+}
+
+void CalculateAccountBallanceAfterDepositeToClient()
+{
+	stClientData ClientData;
+	string fileName = "MyFile.txt";
+	vector<string> vFileContent;
+	int deposite = 0;
+
+	cout << "=====================================" << endl;
+	cout << "\t\tDeposite " << endl;
+	cout << "=====================================" << endl;
+
+	string accountNumber = ReadString("Enter Account Number ? ");
+	ClientData = GetClientData(accountNumber);
+
+	cout << "\nPlz enter Deposite amount ? ";
+	cin >> deposite;
+
+
+	string lineData = FindClientData(accountNumber, ClientData);
+	ReadDataFromFileToVector(fileName, vFileContent);
+
+	ClientData.AccountBallance = ClientData.AccountBallance + deposite;
+
+	UpdateAccountBallanceOfClinetData(ClientData, "#//#", fileName, vFileContent, lineData);
+
+}
+
+void CalculateAccountBallanceAfterWithdrawFromClient()
+{
+	stClientData ClientData;
+	string fileName = "MyFile.txt";
+	vector<string> vFileContent;
+	int deposite = 0;
+
+	cout << "=====================================" << endl;
+	cout << "\t\tWithdraw " << endl;
+	cout << "=====================================" << endl;
+
+	string accountNumber = ReadString("Enter Account Number ? ");
+	ClientData = GetClientData(accountNumber);
+
+	cout << "\nPlz enter Withdraw amount ? ";
+	cin >> deposite;
+
+
+	string lineData = FindClientData(accountNumber, ClientData);
+	ReadDataFromFileToVector(fileName, vFileContent);
+
+	ClientData.AccountBallance = ClientData.AccountBallance - deposite;
+
+	UpdateAccountBallanceOfClinetData(ClientData, "#//#", fileName, vFileContent, lineData);
+
+}
+
+
+void TransactionMenuScreen()
+{
+	short choice;
+
+	ShowTransactionMenu(choice);
+
+	switch (choice)
+	{
+
+
+	case enTransactionMenuScreen::QuickWithdraw:
+
+		CalculateAccountBallanceAfterWithdrawFromClient();
+
+		GoBackToTransactinoMenu();
+		TransactionMenuScreen();
+		break;
+
+	case enTransactionMenuScreen::NormalWithdraw:
+
+		CalculateAccountBallanceAfterWithdrawFromClient();
+
+		GoBackToTransactinoMenu();
+		TransactionMenuScreen();
+		break;
+
+	case enTransactionMenuScreen::DepositeToClient:
+
+		CalculateAccountBallanceAfterDepositeToClient();
+
+		GoBackToTransactinoMenu();
+		TransactionMenuScreen();
+		break;
+
+	case enTransactionMenuScreen::TotalBallacne:
+
+
+
+		GoBackToTransactinoMenu();
+		TransactionMenuScreen();
+		break;
+
+	case enTransactionMenuScreen::Logout:
+
+		ShowLoginScreen();
+		break;
+
+	default:
+		cout << "" << endl;
+	}
+}
+
+bool FindClientData(string accountNumber, string pinCode)
+{
+	stClientData ClientData;
+	vector<string> vFileContent;
+
+	ReadDataFromFileToVector("Myfile.txt", vFileContent);
+
+	for (short i = 0; i < vFileContent.size(); i++)
+	{
+		ClientData = GetClientData(ReadDataStoreInVector(vFileContent[i], "#//#"));
+
+		if (ClientData.AccountNumber == accountNumber && ClientData.PinCode == pinCode)
+		{
+
+			return true;
+		}
+	}
+
+	return false;
+}
+
+void ShowLoginScreen()
+{
+	stClientData ClinetData;
+
+	do 
+	{
+		system("cls");
+		cout << "=====================================" << endl;
+		cout << "\t    Login Screen" << endl;
+		cout << "=====================================" << endl;
+
+		cout << "\tEnter Account Number ? ";
+		cin >> ClinetData.AccountNumber;
+		cout << "\tEnter Your Pin Code ? ";
+		cin >> ClinetData.PinCode;
+
+	}while (!FindClientData(ClinetData.AccountNumber, ClinetData.PinCode));
+
+	short choice;
+
+	TransactionMenuScreen();
+
+	cout << endl;
+}
+
+int main()
+{
+	ShowLoginScreen();
+
+	return 0;
+}

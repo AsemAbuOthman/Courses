@@ -1,0 +1,6 @@
+select Found = 1 where
+exists 
+(
+	select Top 1 x = 0 from VehicleDetails
+	where year = 1950
+)

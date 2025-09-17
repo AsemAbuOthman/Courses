@@ -1,0 +1,248 @@
+#include <iostream>
+#include <string>
+#include<cmath>
+#include<iomanip>
+#include<ctime>
+
+using namespace std;
+
+enum enWeekDays { Sunday = 0, Monday = 1, Tuesday = 2, Wendsday = 3, Thersday = 4, Friday = 5, Saturday = 6 };
+
+struct stDate
+{
+	int Day = 0;
+	int Month = 0;
+	int Year = 0;
+
+};
+
+int ReadNumber(string message)
+{
+	int number = 0;
+
+	cout << message;
+	cin >> number;
+
+
+	return number;
+}
+
+string GetDayName(short day)
+{
+	switch (day)
+	{
+	case enWeekDays::Sunday:
+		return "Sunday";
+
+	case enWeekDays::Monday:
+		return "Monday";
+
+	case enWeekDays::Tuesday:
+		return "Tuesday";
+
+	case enWeekDays::Wendsday:
+		return "Wendsday";
+
+	case enWeekDays::Thersday:
+		return "Thursday";
+
+	case enWeekDays::Friday:
+		return "Friday";
+
+	case enWeekDays::Saturday:
+		return "Saturday";
+	}
+
+	return "";
+}
+
+short DayOfWeekOrder(short year, short month, short day)
+{
+
+	short a = (14 - month) / 12;
+	short y = year - a;
+	short m = month + (12 * a) - 2;
+	short d = (day + y + (y / 4) - (y / 100) + (y / 400) + ((31 * m) / 12)) % 7;
+
+	return d;
+}
+
+short DayOfWeekOrder(stDate Date) 
+{
+	return DayOfWeekOrder(Date.Year, Date.Month, Date.Day);
+}
+
+stDate ReadFullDate()
+{
+	stDate Date;
+
+	Date.Day = ReadNumber("Plz enter a day ? ");
+	Date.Month = ReadNumber("Plz enter a month ? ");
+	Date.Year = ReadNumber("Plz enter a year ? ");
+
+	cout << endl;
+
+	return Date;
+}
+
+bool IsLeapYear(int year)
+{
+	return year % 400 == 0 ? true : year % 100 != 0 && year % 4 == 0 ? true : false;
+}
+
+int NumberOfDaysInMonth(int year, int month)
+{
+	if (month < 1 || month > 12)
+		return 0;
+
+	int arr12Days[] = { 31,30,31,30,31,30,31,31,30,31,30,31 };
+
+	return month == 2 ? (IsLeapYear(year) ? 29 : 28) : arr12Days[month - 1];
+}
+
+int NumberOfDaysFromBeginningOfYear(short year, short month, short day)
+{
+	int sum = 0;
+
+	for (int i = 1; i < month; i++)
+	{
+		sum += NumberOfDaysInMonth(year, i);
+	}
+
+	return sum + day;
+}
+
+int IsDate1BeforeDate2(stDate Date1, stDate Date2)
+{
+
+	return Date1.Year < Date2.Year ? true : Date1.Year == Date2.Year ? Date1.Month < Date2.Month ? true : Date1.Month == Date2.Month ? Date1.Day < Date2.Day ? true : false : false : false;
+}
+
+int DaysDiff(stDate Date1, stDate Date2, bool IncludeEndDay = false)//2000-2022
+{
+	int sumOfDays = 0;
+
+	if (IsDate1BeforeDate2(Date1, Date2))
+	{
+		for (int i = Date1.Year; i < Date2.Year; i++)
+		{
+			sumOfDays += NumberOfDaysFromBeginningOfYear(i, 12, 31);
+		}
+
+		sumOfDays += NumberOfDaysFromBeginningOfYear(Date2.Year, Date2.Month, Date2.Day) - NumberOfDaysFromBeginningOfYear(Date1.Year, Date1.Month, Date1.Day);
+	}
+	else
+	{
+		for (int i = Date2.Year; i < Date1.Year; i++)
+		{
+			sumOfDays += NumberOfDaysFromBeginningOfYear(i, 12, 31);
+		}
+
+		sumOfDays += NumberOfDaysFromBeginningOfYear(Date1.Year, Date1.Month, Date1.Day) - NumberOfDaysFromBeginningOfYear(Date2.Year, Date2.Month, Date2.Day);
+
+		sumOfDays *= -1;
+	}
+
+
+	return IncludeEndDay ? sumOfDays + 1 : sumOfDays;
+}
+
+bool IsDayLastDayInMonth(stDate Date)
+{
+	return Date.Day == NumberOfDaysInMonth(Date.Year, Date.Month);
+}
+
+bool IsMonthLastMonthInYear(stDate Date)
+{
+	return Date.Month == 12;
+}
+
+
+stDate IncreaseDateByOneDay(stDate Date)
+{
+	if (IsDayLastDayInMonth(Date))
+	{
+		if (IsMonthLastMonthInYear(Date))
+		{
+			Date.Day = 1;
+			Date.Month = 1;
+			Date.Year++;
+		}
+		else
+		{
+			Date.Day = 1;
+			Date.Month++;
+
+		}
+	}
+	else
+	{
+		Date.Day++;
+	}
+
+
+	return Date;
+}
+
+bool IsWeekEnd(stDate Date)
+{
+	return DayOfWeekOrder(Date) > enWeekDays::Thersday ? true : false;
+}
+
+bool IsBusinessDay(stDate Date)
+{
+	return !IsWeekEnd(Date);
+}
+
+short GetVacationPeriod(stDate DateFrom, stDate DateTo) 
+{
+	short actualVacationDays = 0;
+
+
+	while (IsDate1BeforeDate2(DateFrom, DateTo))
+	{
+		if (IsBusinessDay(DateFrom))
+			actualVacationDays++;
+	
+		DateFrom = IncreaseDateByOneDay(DateFrom);
+
+	}
+
+	return actualVacationDays;
+}
+
+void PrintMessage(string message, stDate Date)
+{
+	cout << message << Date.Day << "/" << Date.Month << "/" << Date.Year << endl;
+
+	cout << endl;
+}
+
+
+
+int main()
+{
+
+	cout << "Vacations Starts: " << endl;
+
+	stDate DateFrom = ReadFullDate();
+	
+	string message1 = "Vacation from: ";
+	message1 += GetDayName(DayOfWeekOrder(DateFrom)) + " , ";
+
+	cout << endl;
+
+	cout << "Vacations Ends: " << endl;
+
+	stDate DateTo = ReadFullDate();
+	
+	string message2 = "Vacation to: ";
+	message2 += GetDayName(DayOfWeekOrder(DateTo)) + " , ";
+
+	PrintMessage(message1, DateFrom);
+	PrintMessage(message2, DateTo);
+
+	cout << "Actual Vacation Days is: " << GetVacationPeriod(DateFrom, DateTo) << endl;
+
+	return 0;
+}

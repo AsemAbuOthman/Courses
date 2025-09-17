@@ -1,0 +1,11 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\bin\Debug\Forms-Controls.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\bin\Debug\Forms-Controls.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\bin\Debug\Forms-Controls.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms-Controls.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms_Controls.Form1.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms_Controls.Form2.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms_Controls.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms-Controls.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms-Controls.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms-Controls.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Forms-Controls\obj\Debug\Forms-Controls.pdb

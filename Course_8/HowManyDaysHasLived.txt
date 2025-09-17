@@ -1,0 +1,114 @@
+#include <iostream>
+#include <string>
+#include<cmath>
+#include<iomanip>
+#include<ctime>
+
+using namespace std;
+
+struct stDate
+{
+	short Day = 0;
+	short Month = 0;
+	short Year = 0;
+
+};
+
+int ReadNumber(string message)
+{
+	int number = 0;
+
+	cout << message;
+	cin >> number;
+
+	cout << endl;
+
+	return number;
+}
+
+stDate ReadFullDate()
+{
+	stDate Date;
+
+	Date.Day = ReadNumber("Plz enter a day ? ");
+	Date.Month = ReadNumber("Plz enter a month ? ");
+	Date.Year = ReadNumber("Plz enter a year ? ");
+
+	cout << endl;
+
+	return Date;
+}
+
+stDate GetSystemTime() 
+{
+	stDate Date;
+
+	time_t now = time(nullptr);
+
+	tm local_time;
+
+	localtime_s(&local_time, &now);
+
+
+	Date.Year = 1900 + local_time.tm_year;
+	Date.Month = 1 + local_time.tm_mon;
+	Date.Day = local_time.tm_mday;
+
+	return Date;
+}
+
+bool IsLeapYear(int year)
+{
+	return year % 400 == 0 ? true : year % 100 != 0 && year % 4 == 0 ? true : false;
+}
+
+int NumberOfDaysInMonth(int year, int month)
+{
+	if (month < 1 || month > 12)
+		return 0;
+
+	int arr12Days[] = { 31,30,31,30,31,30,31,31,30,31,30,31 };
+
+	return month == 2 ? (IsLeapYear(year) ? 29 : 28) : arr12Days[month - 1];
+}
+
+int NumberOfDaysFromBeginningOfYear(short year, short month, short day)
+{
+	int sum = 0;
+
+	for (int i = 1; i < month; i++)
+	{
+		sum += NumberOfDaysInMonth(year, i);
+	}
+
+	return sum + day;
+}
+
+int DaysDiff(stDate Date1, stDate Date2, bool IncludeEndDay = false)
+{
+
+	int sumOfDays = 0;
+
+	for (short i = Date1.Year; i < Date2.Year; i++)
+	{
+		sumOfDays += NumberOfDaysFromBeginningOfYear(i, 12, 31);
+	}
+
+	return sumOfDays + NumberOfDaysFromBeginningOfYear(Date2.Year, Date2.Month, Date2.Day) - NumberOfDaysFromBeginningOfYear(Date1.Year, Date1.Month, Date1.Day);
+}
+
+
+
+int main()
+{
+
+	stDate Date1 = ReadFullDate();
+	stDate Date2 = GetSystemTime();
+
+
+
+
+	cout << " Your age is  : "  << DaysDiff(Date1, Date2, true) << " Days" << endl;
+
+	return 0;
+}

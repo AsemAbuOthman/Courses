@@ -1,0 +1,39 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            var str = "12/20/2002";
+
+            DateTime dt1;
+
+            var isValidDate = DateTime.TryParse(str, out dt1);
+
+            if (isValidDate)
+                Console.WriteLine(dt1);
+            else
+                Console.WriteLine($"{str} is not a valid date string !");
+
+            var str2 = "20/20/2002";
+
+            DateTime dt2;
+
+            var isValidDate2 = DateTime.TryParse(str2, out dt2);
+
+            if (isValidDate2)
+                Console.WriteLine(dt2);
+            else
+                Console.WriteLine($"{str2} is not a valid date string !");
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}

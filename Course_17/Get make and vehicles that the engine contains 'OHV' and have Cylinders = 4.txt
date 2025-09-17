@@ -1,0 +1,4 @@
+
+select Make, VehicleDetails.* from VehicleDetails
+inner join Makes on Makes.MakeID = VehicleDetails.MakeID
+where Engine like '%OHV%' and Engine_Cylinders = 4

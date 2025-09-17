@@ -1,0 +1,44 @@
+using System;
+
+
+public class clsPerson 
+{
+    public virtual void Greet()
+    {
+        Console.WriteLine("The Pesron Say Hello ");
+    }
+}
+
+public class clsEmployee : clsPerson 
+{
+    public sealed override void Greet()
+    {
+        Console.WriteLine("The Employee Say Hi");
+    }
+}
+
+public class clsManager : clsEmployee 
+{
+
+    //public override void Greet() 
+    //{
+    //    Console.WriteLine("The Manager Say Hi");
+    //}
+}
+internal class Program
+{
+    static void Main(string[] args)
+    {   
+        clsPerson Person = new clsPerson(); 
+        Person.Greet(); 
+
+        clsEmployee Employee = new clsEmployee();
+        Employee.Greet();
+
+        clsManager Manager = new clsManager();
+        Manager.Greet();
+
+        Console.ReadKey();
+    }
+}
+

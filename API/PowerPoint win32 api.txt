@@ -1,0 +1,42 @@
+using System;
+using PowerPoint = Microsoft.Office.Interop.PowerPoint;
+using Core = Microsoft.Office.Core;
+
+namespace PowerPointConsoleApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PowerPoint.Application pptApp = new PowerPoint.Application();
+
+            try
+            {
+                pptApp.Visible = Core.MsoTriState.msoTrue;
+
+                PowerPoint.Presentation presentation = pptApp.Presentations.Add(Core.MsoTriState.msoTrue);
+                PowerPoint.Slide slide = presentation.Slides.Add(1, PowerPoint.PpSlideLayout.ppLayoutText);
+
+                slide.Shapes[1].TextFrame.TextRange.Text = "Hello, PowerPoint!";
+                slide.Shapes[2].TextFrame.TextRange.Text = "Created from a Console App";
+
+                string path = @"C:\Temp\MyPresentation.pptx";
+                presentation.SaveAs(path, PowerPoint.PpSaveAsFileType.ppSaveAsDefault, Core.MsoTriState.msoTrue);
+
+                presentation.Close();
+                Console.WriteLine("✅ Presentation created at: " + path);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("❌ Error: " + ex.Message);
+            }
+            finally
+            {
+                pptApp.Quit();
+            }
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
+    }
+}

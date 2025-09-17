@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+#include<cmath>
+#include<iomanip>
+
+using namespace std;
+
+int ReadNumber(string message)
+{
+	int number = 0;
+
+	cout << message;
+	cin >> number;
+
+	cout << endl << endl;
+
+	return number;
+}
+
+bool IsLeapYear(short year)
+{
+	return year % 400 == 0 ? true : year % 100 != 0 && year % 4 == 0 ? true : false;
+}
+
+short NumberOfDaysInMonth(short year, short month)
+{
+	if (month < 1 || month > 12)
+		return 0;
+
+	short arr12Days[] = { 31,30,31,30,31,30,31,31,30,31,30,31 };
+
+	return month == 2 ? (IsLeapYear(year) ? 29 : 28) : arr12Days[month - 1];
+}
+
+short NumberOfDaysFromBeginningOfYear(short year, short month, short day) 
+{
+	short sum = 0;
+
+	for (short i = 1; i < month; i++)
+	{
+		sum += NumberOfDaysInMonth(year, i);
+	}
+
+	return sum + day;
+}
+
+int main()
+{
+	short day = ReadNumber("Plz enter a day ? ");
+	short month = ReadNumber("Plz enter a month ? ");
+	short year = ReadNumber("Plz enter a year ? ");
+
+	cout << "Number of days from the beginning of the year is " << NumberOfDaysFromBeginningOfYear(year, month, day) << endl;
+
+	return 0;
+}

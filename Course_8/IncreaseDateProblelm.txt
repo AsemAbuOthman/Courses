@@ -1,0 +1,308 @@
+#include <iostream>
+#include <string>
+#include<cmath>
+#include<iomanip>
+#include<ctime>
+
+using namespace std;
+
+struct stDate
+{
+	int Day = 0;
+	int Month = 0;
+	int Year = 0;
+
+};
+
+int ReadNumber(string message)
+{
+	int number = 0;
+
+	cout << message;
+	cin >> number;
+
+	cout << endl;
+
+	return number;
+}
+
+stDate ReadFullDate()
+{
+	stDate Date;
+
+	Date.Day = ReadNumber("Plz enter a day ? ");
+	Date.Month = ReadNumber("Plz enter a month ? ");
+	Date.Year = ReadNumber("Plz enter a year ? ");
+
+	cout << endl;
+
+	return Date;
+}
+
+bool IsLeapYear(int year)
+{
+	return year % 400 == 0 ? true : year % 100 != 0 && year % 4 == 0 ? true : false;
+}
+
+int NumberOfDaysInMonth(int year, int month)
+{
+	if (month < 1 || month > 12)
+		return 0;
+
+	int arr12Days[] = { 31,30,31,30,31,30,31,31,30,31,30,31 };
+
+	return month == 2 ? (IsLeapYear(year) ? 29 : 28) : arr12Days[month - 1];
+}
+
+int NumberOfDaysFromBeginningOfYear(short year, short month, short day)
+{
+	int sum = 0;
+
+	for (int i = 1; i < month; i++)
+	{
+		sum += NumberOfDaysInMonth(year, i);
+	}
+
+	return sum + day;
+}
+
+int IsDate1BeforeDate2(stDate Date1, stDate Date2)
+{
+
+	return Date1.Year < Date2.Year ? true : Date1.Year == Date2.Year ? Date1.Month < Date2.Month ? true : Date1.Month == Date2.Month ? Date1.Day < Date2.Day ? true : false : false : false;
+}
+
+int DaysDiff(stDate Date1, stDate Date2, bool IncludeEndDay = false)//2000-2022
+{
+
+	int sumOfDays = 0;
+
+	if (IsDate1BeforeDate2(Date1, Date2))
+	{
+		for (int i = Date1.Year; i < Date2.Year; i++)
+		{
+			sumOfDays += NumberOfDaysFromBeginningOfYear(i, 12, 31);
+		}
+
+		sumOfDays += NumberOfDaysFromBeginningOfYear(Date2.Year, Date2.Month, Date2.Day) - NumberOfDaysFromBeginningOfYear(Date1.Year, Date1.Month, Date1.Day);
+	}
+	else
+	{
+		for (int i = Date2.Year; i < Date1.Year; i++)
+		{
+			sumOfDays += NumberOfDaysFromBeginningOfYear(i, 12, 31);
+		}
+
+		sumOfDays += NumberOfDaysFromBeginningOfYear(Date1.Year, Date1.Month, Date1.Day) - NumberOfDaysFromBeginningOfYear(Date2.Year, Date2.Month, Date2.Day);
+
+		sumOfDays *= -1;
+	}
+
+	return sumOfDays;
+}
+
+bool IsDayLastDayInMonth(stDate Date)
+{
+	return Date.Day == NumberOfDaysInMonth(Date.Year, Date.Month) ? true : false;
+}
+
+bool IsMonthLastMonthInYear(stDate Date)
+{
+	return Date.Month == 12 ? true : false;
+}
+
+stDate IncreaseDateByOneDay(stDate Date)
+{
+	if (IsDayLastDayInMonth(Date))
+	{
+		if (IsMonthLastMonthInYear(Date))
+		{
+			Date.Day = 1;
+			Date.Month = 1;
+			Date.Year++;
+		}
+		else
+		{
+			Date.Day = 1;
+			Date.Month++;
+
+		}
+	}
+	else
+	{
+		Date.Day++;
+	}
+
+
+	return Date;
+}
+
+stDate IncreaseDateByXDays(stDate Date, int howManyDays)
+{
+	for (short i = 1; i <= howManyDays; i++)
+	{
+		Date = IncreaseDateByOneDay(Date);
+
+	}
+
+	return Date;
+}
+
+stDate IncreaseDateByOneWeek(stDate Date)
+{
+
+	Date = IncreaseDateByXDays(Date, 7);
+
+	return Date;
+}
+
+stDate IncreaseDateByXWeeks(stDate Date, int howManyWeeks)
+{
+	for (int i = 1; i <= howManyWeeks; i++)
+	{
+		Date = IncreaseDateByXDays(Date, 7);
+	}
+
+	return Date;
+}
+
+stDate IncreaseDateByOneMonth(stDate Date)
+{
+	Date = IncreaseDateByXDays(Date, NumberOfDaysInMonth(Date.Year, Date.Month));
+
+
+	return Date;
+}
+
+stDate IncreaseDateByXMonths(stDate Date, int howManyMonths)
+{
+	for (int i = 1; i <= howManyMonths; i++)
+	{
+		Date = IncreaseDateByOneMonth(Date);
+	}
+
+	return Date;
+}
+
+stDate IncreaseDateByOneYear(stDate Date)
+{
+	Date = IncreaseDateByXMonths(Date, 12);
+
+	return Date;
+}
+
+stDate IncreaseDateByXYears(stDate Date, int howManyYears)
+{
+	for (int i = 1; i <= howManyYears; i++)
+	{
+		Date = IncreaseDateByOneYear(Date);
+	}
+
+	return Date;
+}
+
+stDate IncreaseDateByXYearsFaster(stDate Date, int howManyYears)
+{
+	Date.Year += howManyYears;
+
+	return Date;
+}
+
+stDate IncreaseDateByOneDecade(stDate Date)
+{
+	Date = IncreaseDateByXYears(Date, 10);
+
+	return Date;
+}
+
+stDate IncreaseDateByXDecades(stDate Date, int howManyDecades)
+{
+	for (int i = 1; i <= howManyDecades; i++)
+	{
+		Date = IncreaseDateByOneDecade(Date);
+	}
+
+	return Date;
+}
+
+stDate IncreaseDateByXDecadesFaster(stDate Date, int howManysDecades)
+{
+	Date.Year += howManysDecades * 10;
+
+	return Date;
+}
+
+stDate IncreaseDateByOneCentury(stDate Date)
+{
+	Date = IncreaseDateByXDecades(Date, 10);
+
+	return Date;
+}
+
+stDate IncreaseDateByOneMillennium(stDate Date)
+{
+	for (int i = 1; i <= 10; i++)
+	{
+		Date = IncreaseDateByOneCentury(Date);
+
+	}
+
+	return Date;
+}
+
+void PrintMessage(string message, stDate Date)
+{
+	cout << message << Date.Day << "/" << Date.Month << "/" << Date.Year << endl;
+
+}
+
+int main()
+{
+
+	stDate Date = ReadFullDate();
+
+	Date = IncreaseDateByOneDay(Date);
+	PrintMessage("01 - Adding one Day is : ", Date);
+
+	Date = IncreaseDateByXDays(Date, 10);
+	PrintMessage("02 - Adding 10 Days is : ", Date);
+
+	Date = IncreaseDateByOneWeek(Date);
+	PrintMessage("03 - Adding one Week is : ", Date);
+
+	Date = IncreaseDateByXWeeks(Date, 10);
+	PrintMessage("04 - Adding 10 Weeks is : ", Date);
+
+	Date = IncreaseDateByOneMonth(Date);
+	PrintMessage("05 - Adding one Month is : ", Date);
+
+	Date = IncreaseDateByXMonths(Date, 5);
+	PrintMessage("06 - Adding 5 Months is : ", Date);
+
+	Date = IncreaseDateByOneYear(Date);
+	PrintMessage("07 - Adding one year is : ", Date);
+
+	Date = IncreaseDateByXYears(Date, 10);
+	PrintMessage("08 - Adding 10 years is : ", Date);
+
+	Date = IncreaseDateByXYearsFaster(Date, 10);
+	PrintMessage("09 - Adding 10 years (Faster) is : ", Date);
+
+	Date = IncreaseDateByOneDecade(Date);
+	PrintMessage("10 - Adding one Decade is : ", Date);
+
+	Date = IncreaseDateByXDecades(Date, 10);
+	PrintMessage("11 - Adding 10 Decade is : ", Date);
+
+	Date = IncreaseDateByXDecadesFaster(Date, 10);
+	PrintMessage("12 - Adding 10 Decade (Faster) is : ", Date);
+
+	Date = IncreaseDateByOneCentury(Date);
+	PrintMessage("13 - Adding one Century is : ", Date);
+
+	Date = IncreaseDateByOneMillennium(Date);
+	PrintMessage("14 - Adding One Millennium is : ", Date);
+
+
+	return 0;
+}

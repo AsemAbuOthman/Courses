@@ -1,0 +1,139 @@
+#pragma warning(disable : 4996)
+#pragma once
+
+#include <iostream>
+#include <queue>
+#include <string>
+#include <ctime>
+#include <iomanip>
+#include "clsDate.h"
+
+using namespace std;
+using namespace date;
+
+class clsQueueLine : private clsDate
+{
+private:
+	string _Prefix;
+	int _MinutesToServed;
+	int _ServedClients = 0;
+	int _TotalTickets = 0;
+	int _WatingClients = 0;
+
+	struct _stTicket 
+	{
+		string ID;
+		clsDate Date;
+		int WatingClients;
+		int MinutesToWait;
+
+		time_t now = time(nullptr);
+		tm* localTime = localtime(&now);
+	};
+
+	queue<_stTicket> _TicketsLine;
+
+public:
+
+	clsQueueLine(string Prefix, short MinutesToServed)
+	{
+		_Prefix = Prefix;
+		_MinutesToServed = MinutesToServed;
+	}
+
+	void IssueTicket()
+	{
+		_TotalTickets++;
+
+		_stTicket Ticket;
+
+		Ticket.ID = _Prefix + (to_string(_TicketsLine.size() + 1));
+		Ticket.Date  = Ticket.Date.GetSystemTime();
+		Ticket.MinutesToWait = _WatingClients * _MinutesToServed;
+		Ticket.WatingClients = _TicketsLine.size();
+		_WatingClients++;
+
+		_TicketsLine.push(Ticket);
+	}
+
+	void PrintInfo()
+	{
+		cout << "\n\n-------------------------\n\n";
+		cout << "      Queue Info";
+		cout << "\n\n-------------------------\n\n";
+
+		cout << "  Prefix         = " << _Prefix << endl;
+		cout << "  Total Tickets  = " << _TotalTickets << endl;
+		cout << "  Served Clients = " << _ServedClients << endl;
+		cout << "  Wating Clients = " << _WatingClients << endl;
+
+		cout << "\n-------------------------\n\n";
+	}
+
+	void PrintTicketsLineRTL()
+	{
+		queue<_stTicket> tempTicketLine = _TicketsLine;
+
+		cout << "\n\nTickets:	";
+
+		while (!tempTicketLine.empty())
+		{
+			_stTicket Ticket = tempTicketLine.front();
+
+			cout << Ticket.ID << " <-- ";
+
+			tempTicketLine.pop();
+		}
+	}
+
+	void PrintTicketsLineLTR()
+	{
+		queue<_stTicket> tempTicketLine = _TicketsLine;
+
+		cout << "\n\nTickets:	";
+
+		while (!tempTicketLine.empty())
+		{
+			_stTicket Ticket = tempTicketLine.back();
+
+			cout << Ticket.ID << " --> ";
+
+			tempTicketLine.pop();
+		}
+	}
+
+	void PrintAllTickets() 
+	{
+		queue<_stTicket> tempTicketLine = _TicketsLine;
+
+		cout << "\n\n\n      ---Tickets---";
+
+		while (!tempTicketLine.empty())
+		{
+			_stTicket Ticket = tempTicketLine.front();
+
+			cout << "\n\n-------------------------\n\n";
+
+			cout << "           " << Ticket.ID << endl << endl;
+
+			cout << "   " << Ticket.Date.GetDay() << "/" << Ticket.Date.GetMonth() << "/" << Ticket.Date.GetYear() << " - " << put_time(Ticket.localTime, "%H:%M:%S") << endl;
+			cout << "    Waiting Clients = "  << _TotalTickets << endl;
+			cout << "     Serve Time In" << endl;
+			cout << "      " << Ticket.MinutesToWait << " Minutes." << endl;
+
+			cout << "\n-------------------------\n\n";
+
+			tempTicketLine.pop();
+		}
+	}
+
+	void ServeNextClient() 
+	{
+		_WatingClients--;
+		_ServedClients++;
+
+		_TicketsLine.pop();
+	}
+
+};
+

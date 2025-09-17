@@ -1,0 +1,52 @@
+namespace OOP_C_
+{
+    public class MyBaseClass 
+    {
+        public virtual void MyMethod() 
+        {
+            Console.WriteLine("Implimentation of MyMethod in Base Class");
+        }
+
+        public virtual void MyOtherMethod()
+        {
+            Console.WriteLine("Implimentation of MyOtherMethod in Base Class");
+        }
+    }
+
+    public class MyDerivedClass : MyBaseClass
+    {
+        public override void MyMethod()
+        {
+            Console.WriteLine("Implimentation of MyMethod in Derived Class using OVERRIDING");
+        }
+
+        public new void MyOtherMethod()
+        {
+            Console.WriteLine("Implimentation of MyOtherMethod in Derived Class using SHADOWING");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            MyBaseClass objBaseClass = new MyBaseClass();
+            objBaseClass.MyMethod();
+            objBaseClass.MyOtherMethod();
+
+            Console.WriteLine();
+
+            MyDerivedClass objDerivedClass = new MyDerivedClass();
+            objDerivedClass.MyMethod();// use overriding same derived calss
+            objDerivedClass.MyOtherMethod(); // use shadowing
+
+            Console.WriteLine();
+
+            MyBaseClass obj = objDerivedClass;
+            obj.MyMethod();// use overriding same derived calss
+            obj.MyOtherMethod(); // use shadowing same base calss
+
+            Console.ReadKey();
+        }
+    }
+}

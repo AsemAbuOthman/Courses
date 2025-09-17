@@ -1,0 +1,30 @@
+#pragma once
+
+#include<iostream>
+#include "clsDblLinkedList.h"
+#include "clsQueueArr.h"
+
+using namespace std;
+
+template <typename t> class clsStackArr : public clsQueueArr<t>
+{
+
+public:
+
+	void push(t value)
+	{
+		clsQueueArr<t>::_DynamicArray.InsertAtBeginning(value);
+	}
+
+	t Bottom()
+	{
+		return clsQueueArr<t>::back();
+	}
+
+	t Top()
+	{
+		return clsQueueArr<t>::front();
+	}
+
+};
+

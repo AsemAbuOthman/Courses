@@ -1,0 +1,43 @@
+namespace OOP_C_
+{
+    public class clsPerson 
+    {
+        public int ID { get; set; } 
+        public string Name { get; set; } 
+        public int Age { get; set; }
+
+        public void Greet() 
+        {
+            Console.WriteLine($"Hi, I'm {Name} my age is {Age} ID is {ID}");
+        }
+
+    }
+
+    class clsEmployee : clsPerson
+    {
+        public int Salary { get; set; }
+        public string Company { get; set; }
+        public void Work()
+        {
+            Console.WriteLine($"I work at {Company} and earn {Salary:C} per year.");
+        }
+
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            clsEmployee Employee1 = new clsEmployee { ID = 3200100, Name = "Asem Abu Othman", Age = 22, Salary = 50000, Company = "Micro Inc."};
+            
+            clsPerson Person1 = Employee1;
+            Person1.Greet();
+
+            clsPerson Person2 = new clsEmployee { ID = 3200100, Name = "Asem Abu Othman", Age = 22, Salary = 50000, Company = "Micro Inc." };
+            clsEmployee Employee2 = (clsEmployee)Person2;
+            Employee2.Work();
+
+            Console.ReadKey();
+        }
+    }
+}

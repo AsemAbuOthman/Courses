@@ -1,0 +1,6 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\TetsMyFirstClassLibrary\bin\Debug\TetsMyFirstClassLibrary.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\TetsMyFirstClassLibrary\bin\Debug\TetsMyFirstClassLibrary.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\TetsMyFirstClassLibrary\obj\Debug\TetsMyFirstClassLibrary.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\TetsMyFirstClassLibrary\obj\Debug\TetsMyFirstClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\TetsMyFirstClassLibrary\obj\Debug\TetsMyFirstClassLibrary.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\TetsMyFirstClassLibrary\obj\Debug\TetsMyFirstClassLibrary.pdb

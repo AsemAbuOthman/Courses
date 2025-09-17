@@ -1,0 +1,95 @@
+namespace OOP_C_
+{
+
+    class clsCalculator 
+    {
+        private double _OldNumber = 0;
+        private double _NewNumber = 0;
+        private string _Operation = "";
+
+        public void Add(double Number) 
+        {
+            _OldNumber = Number;
+            _NewNumber += Number;
+            _Operation = "Adding";
+        }
+
+        public void Subtract(double Number)
+        {
+            _OldNumber = Number;
+            _NewNumber -= Number;
+            _Operation = "Subtracting";
+
+        }
+
+        public void Divide(double Number)
+        {
+            if (Number == 0) 
+            {
+                Number = 1;
+            }
+
+            _OldNumber = Number;
+            _NewNumber /= Number;
+            _Operation = "Dividing";
+
+        }
+
+        public void Multiply(double Number)
+        {
+            _OldNumber = Number;
+            _NewNumber *= Number;
+            _Operation = "Multiplying";
+
+        }
+
+        public void PrintResult() 
+        {
+            Console.WriteLine($"Result after {_Operation} {_OldNumber} is : {_NewNumber}");
+        }
+
+        public void Clear()
+        {
+            _OldNumber = 0;
+            _NewNumber = 0;
+            _Operation = "Clear";
+        }
+
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            clsCalculator calculator = new clsCalculator();
+
+
+            calculator.Clear();
+
+            calculator.Add(10);
+            calculator.PrintResult();
+
+            calculator.Add(100);
+            calculator.PrintResult();
+
+            calculator.Subtract(20);
+            calculator.PrintResult();
+
+            calculator.Divide(0);
+            calculator.PrintResult();
+
+            calculator.Divide(2);
+            calculator.PrintResult();
+
+            calculator.Multiply(3);
+            calculator.PrintResult();
+
+            calculator.Clear();
+            calculator.PrintResult();
+
+
+            Console.ReadKey();
+        }
+    }
+}

@@ -1,0 +1,10 @@
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\bin\Debug\PizzaApp.exe.config
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\bin\Debug\PizzaApp.exe
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\bin\Debug\PizzaApp.pdb
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\obj\Debug\PizzaApp.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\obj\Debug\PizzaApp.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\obj\Debug\PizzaApp.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\obj\Debug\PizzaApp.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\obj\Debug\PizzaApp.exe
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\obj\Debug\PizzaApp.pdb
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\PizzaApp\obj\Debug\PizzaApp.frmPizzaOrder.resources

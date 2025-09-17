@@ -1,0 +1,134 @@
+#include <iostream>
+#include <string>
+#include<cmath>
+#include<iomanip>
+#include<ctime>
+
+using namespace std;
+
+struct stDate
+{
+	int Day = 0;
+	int Month = 0;
+	int Year = 0;
+
+};
+
+struct stPeriod 
+{
+	stDate StartDate;
+	stDate EndDate;
+};
+
+int ReadNumber(string message)
+{
+	int number = 0;
+
+	cout << message;
+	cin >> number;
+
+
+	return number;
+}
+
+
+stDate ReadFullDate()
+{
+	stDate Date;
+
+	Date.Day = ReadNumber("Plz enter a day ? ");
+	Date.Month = ReadNumber("Plz enter a month ? ");
+	Date.Year = ReadNumber("Plz enter a year ? ");
+
+	cout << endl;
+
+	return Date;
+}
+
+bool IsLeapYear(int year)
+{
+	return year % 400 == 0 ? true : year % 100 != 0 && year % 4 == 0 ? true : false;
+}
+
+int NumberOfDaysInMonth(int year, int month)
+{
+	if (month < 1 || month > 12)
+		return 0;
+
+	int arr12Days[] = { 31,30,31,30,31,30,31,31,30,31,30,31 };
+
+	return month == 2 ? (IsLeapYear(year) ? 29 : 28) : arr12Days[month - 1];
+}
+
+int NumberOfDaysFromBeginningOfYear(short year, short month, short day)
+{
+	int sum = 0;
+
+	for (int i = 1; i < month; i++)
+	{
+		sum += NumberOfDaysInMonth(year, i);
+	}
+
+	return sum + day;
+}
+
+int IsDate1BeforeDate2(stDate Date1, stDate Date2)
+{
+
+	return Date1.Year < Date2.Year ? true : Date1.Year == Date2.Year ? Date1.Month < Date2.Month ? true : Date1.Month == Date2.Month ? Date1.Day < Date2.Day ? true : false : false : false;
+}
+
+int DaysDiff(stDate Date1, stDate Date2, bool IncludeEndDay = false)//2000-2022
+{
+
+	int sumOfDays = 0;
+
+	if (IsDate1BeforeDate2(Date1, Date2))
+	{
+		for (short i = Date1.Year; i < Date2.Year; i++)
+		{
+			sumOfDays += NumberOfDaysFromBeginningOfYear(i, 12, 31);
+		}
+
+		sumOfDays += NumberOfDaysFromBeginningOfYear(Date2.Year, Date2.Month, Date2.Day) - NumberOfDaysFromBeginningOfYear(Date1.Year, Date1.Month, Date1.Day);
+	}
+	else
+	{
+		for (short i = Date2.Year; i < Date1.Year; i++)
+		{
+			sumOfDays += NumberOfDaysFromBeginningOfYear(i, 12, 31);
+		}
+
+		sumOfDays += NumberOfDaysFromBeginningOfYear(Date1.Year, Date1.Month, Date1.Day) - NumberOfDaysFromBeginningOfYear(Date2.Year, Date2.Month, Date2.Day);
+
+		sumOfDays *= -1;
+	}
+
+	return IncludeEndDay ? sumOfDays + 1 : sumOfDays;
+}
+	
+short CalculatePeriodLength(stPeriod Period, bool includeEndDate = false)
+{
+	return DaysDiff(Period.StartDate, Period.EndDate, includeEndDate);
+}
+
+int main()
+{
+	stPeriod Period;
+
+	cout << "Enter Period 1 : " << endl;
+	cout << "Enter Start Date : " << endl << endl;
+	Period.StartDate = ReadFullDate();
+
+	cout << "Enter End Date : " << endl << endl;
+	Period.EndDate = ReadFullDate();
+
+	cout << endl;
+
+	cout << "Period Length is : " << CalculatePeriodLength(Period) << endl;
+	cout << "Period Length (Including End Date) is : " << CalculatePeriodLength(Period, true) << endl;
+
+	cout << endl;
+
+	return 0;
+}

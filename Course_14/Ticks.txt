@@ -1,0 +1,21 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            DateTime dt1 = new DateTime();
+
+            Console.WriteLine(DateTime.MinValue.Ticks);
+            Console.WriteLine(DateTime.MaxValue.Ticks);
+            Console.WriteLine(dt1.Ticks);
+
+            Console.ReadKey();
+
+        }
+    }
+}

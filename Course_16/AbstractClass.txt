@@ -1,0 +1,55 @@
+namespace OOP_C_
+{
+    public abstract class clsPerson 
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
+
+        public abstract void Introduce();
+
+        public void SayGoodBye() 
+        {
+            Console.WriteLine($"Goodbye! {FirstName} {LastName}");
+        }
+    }
+
+    public class clsEmployee : clsPerson
+    {
+        public int EmployeeId { get; set; }
+        public float Salary { get; set; }
+
+        public override void Introduce()
+        {
+            Console.WriteLine($"Hi, I'm {FirstName} {LastName} my Emloyee ID is {EmployeeId} with Salary {Salary:C}");
+        }
+        public void Work() 
+        {
+            Console.WriteLine($"Employee wirh ID {EmployeeId} and Salary {Salary:C} is working");
+        }
+    
+    }
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            clsEmployee Employee = new clsEmployee();
+
+            Employee.EmployeeId = 3200100;
+            Employee.FirstName = "Asem";
+            Employee.LastName = "Abu Othman";
+            Employee.Age = 22;
+            Employee.Salary = 5000;
+            
+            Console.WriteLine();
+
+            Employee.Introduce();
+            Employee.Work();
+            Employee.SayGoodBye();
+
+            Console.ReadKey();
+        }
+    }
+}

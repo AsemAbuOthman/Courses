@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include<cmath>
+#include<iomanip>
+
+using namespace std;
+
+struct stDate
+{
+	short Day = 0;
+	short Month = 0;
+	short Year = 0;
+
+};
+
+int ReadNumber(string message)
+{
+	int number = 0;
+
+	cout << message;
+	cin >> number;
+
+	cout << endl;
+
+	return number;
+}
+
+stDate ReadFullDate()
+{
+	stDate Date;
+
+	Date.Day = ReadNumber("Plz enter a day ? ");
+	Date.Month = ReadNumber("Plz enter a month ? ");
+	Date.Year = ReadNumber("Plz enter a year ? ");
+
+	cout << endl;
+
+	return Date;
+}
+
+bool IsDate1EqualDate2(stDate Date1, stDate Date2)
+{
+
+	return (Date1.Year == Date2.Year) ? ((Date1.Month == Date2.Month) ? (Date1.Day == Date2.Day) : false ? true : false) : false;
+}
+
+int main()
+{
+
+	stDate Date1 = ReadFullDate();
+	stDate Date2 = ReadFullDate();
+
+
+	if (IsDate1EqualDate2(Date1, Date2))
+	{
+		cout << "Yes, Date1 is Equal Date2" << endl;
+	}
+	else
+	{
+		cout << "No, Date1 isn't Equal Date2" << endl;
+	}
+
+	return 0;
+}

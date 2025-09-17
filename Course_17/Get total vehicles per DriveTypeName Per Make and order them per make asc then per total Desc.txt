@@ -1,0 +1,7 @@
+
+
+select  Make, DriveTypeName, TotalVehicelPerDriveTypeName = count(*) from VehicleDetails
+inner join DriveTypes on DriveTypes.DriveTypeID = VehicleDetails.DriveTypeID
+inner join Makes on Makes.MakeID = VehicleDetails.MakeID
+group by Make, DriveTypeName
+order by Make asc, TotalVehicelPerDriveTypeName desc

@@ -1,0 +1,91 @@
+namespace OOP_C_
+{
+    public interface IPerson 
+    {
+        string FirstName { get; set; }
+        string LastName { get; set; }
+        void Introduce();
+        void Print();
+        string To_String();
+
+    }
+
+    public interface ICommunicate 
+    {
+        void CallPhone();
+        void SendEmail(string Title, string Body);
+        void SendFax(string Title, string Body);
+        void SendSMS(string Title, string Body);
+
+    }
+
+    public class clsPerson : IPerson, ICommunicate
+    {
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public clsPerson() 
+        {
+            FirstName = string.Empty;
+            LastName = string.Empty;    
+        }
+
+        public void Introduce() 
+        {
+            Console.WriteLine("Here is Introduce method");
+        }
+
+        public void Print() 
+        {
+            Console.WriteLine("Here is Print method");
+        }
+
+        public string To_String() 
+        {
+            Console.WriteLine("Here is To_String method");
+
+            return "";
+        }
+
+        public void CallPhone() 
+        {
+            Console.WriteLine("Calling Phone.... :-)");
+        }
+
+        public void SendEmail(string Title, string Body) 
+        {
+            Console.WriteLine($"Email : {Title} {Body}");
+        }
+
+        public void SendFax(string Title, string Body) 
+        {
+            Console.WriteLine($"Fax : {Title} {Body}");
+        }
+
+        public void SendSMS(string Title, string Body)
+        {
+            Console.WriteLine($"SMS : {Title} {Body}");
+        }
+
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            clsPerson Person = new clsPerson();
+
+            Person.FirstName = "Asem";
+            Person.LastName = "Abu Othman";
+            Person.CallPhone();
+            Person.SendEmail("Title", "Body");
+            Person.SendFax("Title", "Body");
+            Person.SendSMS("Title", "Body");
+            Person.Print();
+            Person.Introduce();
+
+            Console.ReadKey();
+        }
+    }
+}

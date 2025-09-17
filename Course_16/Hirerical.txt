@@ -1,0 +1,69 @@
+namespace OOP_C_
+{
+    public class clsPerson 
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public void Introduce() 
+        {
+            Console.WriteLine($"Hi, I'm {Name} and my age is {Age}");
+        }
+
+    }
+
+    public class clsEmployee : clsPerson
+    {
+        public int EmployeeId { get; set; }
+        public float Salary { get; set; }
+
+        public void Work() 
+        {
+            Console.WriteLine($"Employee wirh ID {EmployeeId} and Salary {Salary:C} is working");
+        }
+    
+    }
+
+    public class clsUser : clsPerson
+    {
+    
+        public string Username { get; set; }
+        public string Password { get; set; }
+
+
+        public void Info() 
+        {
+            Console.WriteLine($"Doctor {Name} with Username {Username} and Password {Password}");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            clsEmployee doctor = new clsEmployee();
+
+            doctor.Name = "Asem";
+            doctor.Age = 22;
+            doctor.EmployeeId = 3200100;
+            doctor.Salary = 5000;
+            doctor.Introduce();
+            doctor.Work();
+
+            Console.WriteLine();
+
+            clsUser User = new clsUser();
+
+            User.Name = "Asem";
+            User.Age = 22;
+            User.Username = "Asemabuothman";
+            User.Password = "0000";
+            User.Introduce();
+            User.Info();
+
+
+            Console.ReadKey();
+        }
+    }
+}

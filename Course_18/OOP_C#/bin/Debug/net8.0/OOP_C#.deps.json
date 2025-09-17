@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OOP_C#/1.0.0": {
+        "dependencies": {
+          "TetsMyFirstClassLibrary": "1.0.0"
+        },
+        "runtime": {
+          "OOP_C#.dll": {}
+        }
+      },
+      "TetsMyFirstClassLibrary/1.0.0": {
+        "runtime": {
+          "TetsMyFirstClassLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OOP_C#/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TetsMyFirstClassLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

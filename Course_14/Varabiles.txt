@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string MyName = "Asem Abu Ohtman";
+            Console.WriteLine(MyName);
+
+            int x = 10;
+            int y = 20;
+
+            Console.WriteLine("x = " + x);
+            Console.WriteLine("y = " + y);
+
+            //Wrong result
+            Console.WriteLine("x + y = " + x + y);
+
+            //Right result
+            Console.WriteLine("x + y = " + (x + y));
+
+            double pi = 22D / 7D;
+            char MyLetter = 'A';
+            bool IsGood = true;
+
+            Console.WriteLine(pi);
+            Console.WriteLine(MyLetter);
+            Console.WriteLine(IsGood);
+
+            Console.ReadKey();
+        }
+    }
+}

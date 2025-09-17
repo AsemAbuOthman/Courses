@@ -1,0 +1,14 @@
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\MyApp.exe
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\MyApp.deps.json
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\MyApp.runtimeconfig.json
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\MyApp.dll
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net8.0\MyApp.pdb
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\MyApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\MyApp.AssemblyInfoInputs.cache
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\MyApp.AssemblyInfo.cs
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\MyApp.csproj.CoreCompileInputs.cache
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\MyApp.dll
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\refint\MyApp.dll
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\MyApp.pdb
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\MyApp.genruntimeconfig.cache
+C:\Users\asimw\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net8.0\ref\MyApp.dll

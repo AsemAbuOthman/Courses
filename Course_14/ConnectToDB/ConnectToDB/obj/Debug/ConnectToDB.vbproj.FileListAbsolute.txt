@@ -1,0 +1,16 @@
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\bin\Debug\ConnectToDB.exe.config
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\bin\Debug\ConnectToDB.exe
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\bin\Debug\ConnectToDB.pdb
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\bin\Debug\ConnectToDB.xml
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\bin\Debug\System.Data.SqlClient.dll
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\bin\Debug\System.Data.SqlClient.xml
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.vbproj.AssemblyReference.cache
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.Resources.resources
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.vbproj.GenerateResource.cache
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.vbproj.CoreCompileInputs.cache
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.vbproj.CopyComplete
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.exe
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.xml
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.pdb
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.frmConnection.resources
+C:\Users\asimw\source\repos\ConnectToDB\ConnectToDB\obj\Debug\ConnectToDB.Testing.resources

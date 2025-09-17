@@ -1,0 +1,24 @@
+using System;
+
+sealed class clsA // class that can not inherited
+{
+   
+}
+
+class clsB 
+{
+    public void Method1()
+    {
+        Console.WriteLine("Method1 of class B is called");
+    }
+}
+
+internal class Program
+{
+    static void Main(string[] args)
+    {   
+
+        Console.ReadKey();
+    }
+}
+

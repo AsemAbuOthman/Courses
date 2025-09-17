@@ -1,0 +1,29 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            
+            var studentFullInfo = new
+            {
+                studentBasiInfo = new { ID = 10, FirstName = "Asem", LastName = "Abu Othman" },
+                address = new { Country = "Jordan", City = "Amman", Region = "Tabrbour", Street = "Ain Maoun"}
+
+            };
+
+            Console.WriteLine("StudentID: {0}", studentFullInfo.studentBasiInfo.ID);
+            Console.WriteLine("Student FirstName: {0}", studentFullInfo.studentBasiInfo.FirstName);
+            Console.WriteLine("Student LastName: {0}", studentFullInfo.studentBasiInfo.LastName);
+            Console.WriteLine("Student Address: {0}, {1}, {2}, {3}", studentFullInfo.address.Country, studentFullInfo.address.City,
+                                                        studentFullInfo.address.Region, studentFullInfo.address.Street);
+
+            Console.ReadKey();
+
+
+        }
+    }
+}

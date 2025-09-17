@@ -1,0 +1,31 @@
+namespace OOP_C_
+{
+    class clsCar 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }    
+        public double Price { get; set; }
+
+        public clsCar() 
+        {
+            Console.WriteLine("Constructor Called");
+        }
+
+        ~clsCar()
+        {
+            Console.WriteLine("Constructor Called");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            clsCar car1 = new clsCar();
+
+
+            Console.ReadKey();
+        }
+    }
+}

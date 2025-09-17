@@ -1,0 +1,16 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\bin\Debug\Contacts.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\bin\Debug\Contacts.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\bin\Debug\Contacts.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\bin\Debug\ContactsBuisnessLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\bin\Debug\ContactsDataLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\bin\Debug\ContactsBuisnessLayer.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\bin\Debug\ContactsDataLayer.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.frmListContacts.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.csproj.CopyComplete
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Contacts\obj\Debug\Contacts.fmAddEditContact.resources

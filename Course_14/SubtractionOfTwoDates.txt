@@ -1,0 +1,24 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            DateTime dt1 = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            DateTime dt2 = new DateTime(DateTime.Now.Year + 1, DateTime.Now.Month + 1, DateTime.Now.Day + 1);
+
+            Console.WriteLine(dt2);
+
+            TimeSpan result = dt2.Subtract(dt1);
+
+            Console.WriteLine(result.ToString());
+
+            Console.ReadKey();
+
+        }
+    }
+}

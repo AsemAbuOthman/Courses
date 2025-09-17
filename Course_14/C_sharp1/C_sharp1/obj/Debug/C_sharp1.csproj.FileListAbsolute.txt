@@ -1,0 +1,7 @@
+C:\Users\asimw\source\repos\C_sharp1\C_sharp1\bin\Debug\C_sharp1.exe.config
+C:\Users\asimw\source\repos\C_sharp1\C_sharp1\bin\Debug\C_sharp1.exe
+C:\Users\asimw\source\repos\C_sharp1\C_sharp1\bin\Debug\C_sharp1.pdb
+C:\Users\asimw\source\repos\C_sharp1\C_sharp1\obj\Debug\C_sharp1.csproj.AssemblyReference.cache
+C:\Users\asimw\source\repos\C_sharp1\C_sharp1\obj\Debug\C_sharp1.csproj.CoreCompileInputs.cache
+C:\Users\asimw\source\repos\C_sharp1\C_sharp1\obj\Debug\C_sharp1.exe
+C:\Users\asimw\source\repos\C_sharp1\C_sharp1\obj\Debug\C_sharp1.pdb

@@ -1,0 +1,16 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World !");
+            Console.WriteLine("My Name is Asem Abu Othman");
+            Console.WriteLine("I am learning C#");
+            Console.WriteLine("The sum of 10 + 20 = " + (10 +20));
+            Console.ReadKey();
+        }
+    }
+}

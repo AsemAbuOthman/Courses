@@ -1,0 +1,33 @@
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importing the SystemParametersInfo function from user32.dll
+    [DllImport("user32.dll", SetLastError = true)]
+    public static extern bool SystemParametersInfo(
+        int uAction, int uParam, string lpvParam, int fuWinIni);
+
+    // Constants for changing wallpaper
+    const int SPI_SETDESKWALLPAPER = 20;
+    const int SPIF_UPDATEINIFILE = 0x01;
+    const int SPIF_SENDWININICHANGE = 0x02;
+
+    static void Main(string[] args)
+    {
+        // Path to the wallpaper image
+        string imagePath = @"C:\Users\asimw\OneDrive\Pictures\Old\SnakeEater.png";
+
+        bool result = SystemParametersInfo(SPI_SETDESKWALLPAPER, 0, imagePath,
+            SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+
+        if (result)
+        {
+            Console.WriteLine("Wallpaper changed successfully.");
+        }
+        else
+        {
+            Console.WriteLine("Failed to change wallpaper.");
+        }
+    }
+}

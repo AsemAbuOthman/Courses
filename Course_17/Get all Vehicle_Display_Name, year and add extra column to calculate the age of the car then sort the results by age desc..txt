@@ -1,0 +1,4 @@
+select Vehicle_Display_Name , Year, Age = YEAR(getdate()) - VehicleDetails.Year
+from VehicleDetails
+order by Age desc
+

@@ -1,0 +1,3 @@
+
+select TotalVehiclesWithoutDoors = Count(*) from VehicleDetails
+where NumDoors is null;

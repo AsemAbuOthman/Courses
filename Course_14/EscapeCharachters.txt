@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Useful Escape Char. \n");
+
+            Console.WriteLine("NewLine: ");
+            Console.WriteLine("My Name is Asem\n");
+
+            Console.WriteLine("Tab: ");
+            Console.WriteLine("My Name is \tAsem\n");
+
+            Console.WriteLine("Backspace: ");
+            Console.WriteLine("My Name is \bAsem\n");
+
+            Console.WriteLine("Single Quote: ");
+            Console.WriteLine("My Name is \'Asem\'\n");
+
+            Console.WriteLine("Double Quote: ");
+            Console.WriteLine("My Name is \"Asem\"\n");
+
+            Console.WriteLine("Backslash: ");
+            Console.WriteLine("My Name is \\Asem\n");
+
+            Console.WriteLine("Alert: ");
+            Console.WriteLine("\a");
+
+            Console.ReadKey();
+        }
+    }
+}

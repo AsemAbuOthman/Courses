@@ -1,0 +1,9 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\bin\Debug\ContactsBuisnessLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\bin\Debug\ContactsBuisnessLayer.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\bin\Debug\ContactsDataLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\bin\Debug\ContactsDataLayer.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\obj\Debug\ContactsBuisnessLayer.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\obj\Debug\ContactsBuisnessLayer.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\obj\Debug\ContactsBuisnessLayer.csproj.CopyComplete
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\obj\Debug\ContactsBuisnessLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsBuisnessLayer\obj\Debug\ContactsBuisnessLayer.pdb

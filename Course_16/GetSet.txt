@@ -1,0 +1,56 @@
+namespace OOP_C_
+{
+
+    class clsEmployee 
+    {
+        private int _ID;
+        private string _Name;
+
+        public int ID 
+        {
+            get 
+            {
+                return _ID;
+            }
+
+            set 
+            {
+                _ID = value;
+            }
+        }
+
+
+        public string Name 
+        {
+            get 
+            {
+                return _Name;
+            }
+
+            set 
+            {
+                _Name = value;
+            }
+        }
+
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            clsEmployee employee1 = new clsEmployee();
+
+
+            Console.Write("Enter your ID   : ");
+            employee1.ID = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter your Name : ");
+            employee1.Name = Console.ReadLine();
+
+
+            Console.ReadKey();
+        }
+    }
+}

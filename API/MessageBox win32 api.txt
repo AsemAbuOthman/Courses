@@ -1,0 +1,17 @@
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Import MessageBox function from user32.dll
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]
+    static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);
+
+    static void Main()
+    {
+        // Show the message box
+        MessageBox(IntPtr.Zero, "Hello from Win32 API!", "Message Box", 0);
+
+        Console.WriteLine("Message box was displayed.");
+    }
+}

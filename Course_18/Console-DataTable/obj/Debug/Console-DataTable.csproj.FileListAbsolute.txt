@@ -1,0 +1,7 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataTable\bin\Debug\Console-DataTable.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataTable\bin\Debug\Console-DataTable.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataTable\bin\Debug\Console-DataTable.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataTable\obj\Debug\Console-DataTable.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataTable\obj\Debug\Console-DataTable.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataTable\obj\Debug\Console-DataTable.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataTable\obj\Debug\Console-DataTable.pdb

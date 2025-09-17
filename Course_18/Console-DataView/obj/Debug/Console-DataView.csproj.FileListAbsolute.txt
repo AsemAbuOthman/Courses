@@ -1,0 +1,7 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataView\bin\Debug\Console-DataView.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataView\bin\Debug\Console-DataView.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataView\bin\Debug\Console-DataView.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataView\obj\Debug\Console-DataView.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataView\obj\Debug\Console-DataView.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataView\obj\Debug\Console-DataView.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataView\obj\Debug\Console-DataView.pdb

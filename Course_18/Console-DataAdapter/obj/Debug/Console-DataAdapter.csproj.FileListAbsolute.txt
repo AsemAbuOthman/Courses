@@ -1,0 +1,7 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataAdapter\bin\Debug\Console-DataAdapter.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataAdapter\bin\Debug\Console-DataAdapter.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataAdapter\bin\Debug\Console-DataAdapter.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataAdapter\obj\Debug\Console-DataAdapter.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataAdapter\obj\Debug\Console-DataAdapter.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataAdapter\obj\Debug\Console-DataAdapter.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\Console-DataAdapter\obj\Debug\Console-DataAdapter.pdb

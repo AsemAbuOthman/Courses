@@ -1,0 +1,6 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsDataLayer\bin\Debug\ContactsDataLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsDataLayer\bin\Debug\ContactsDataLayer.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsDataLayer\obj\Debug\ContactsDataLayer.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsDataLayer\obj\Debug\ContactsDataLayer.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsDataLayer\obj\Debug\ContactsDataLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsDataLayer\obj\Debug\ContactsDataLayer.pdb

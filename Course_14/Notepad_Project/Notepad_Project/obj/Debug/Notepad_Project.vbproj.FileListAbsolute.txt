@@ -1,0 +1,12 @@
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\bin\Debug\Notepad_Project.exe.config
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\bin\Debug\Notepad_Project.exe
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\bin\Debug\Notepad_Project.pdb
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\bin\Debug\Notepad_Project.xml
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.vbproj.AssemblyReference.cache
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.Resources.resources
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.vbproj.GenerateResource.cache
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.vbproj.CoreCompileInputs.cache
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.exe
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.xml
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.pdb
+C:\Users\asimw\source\repos\Notepad_Project\Notepad_Project\obj\Debug\Notepad_Project.frmNotepad.resources

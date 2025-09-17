@@ -1,0 +1,21 @@
+ struct ustring
+    {
+        union
+        {
+            string s;
+            wstring ws;
+        };
+
+        bool bAscii = true;
+        ~ustring()
+        {
+            if (bAscii)
+            {
+                s.~string();
+            }
+            else
+            {
+                ws.~wstring();
+            }
+        }
+    };

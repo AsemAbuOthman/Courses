@@ -1,0 +1,64 @@
+namespace OOP_C_
+{
+class Settings 
+    {
+        public static int DayInNumber 
+        {
+            get 
+            {
+                return DateTime.Today.Day;
+            }
+        }
+        public static string DayName
+        {
+            get
+            {
+                return DateTime.Today.DayOfWeek.ToString();
+            }
+        }
+
+        public static string ProjectPath 
+        {
+            get;
+            set;
+        }
+
+        private Settings() { }
+    }
+
+    //static class Settings
+    //{
+    //    public static int DayInNumber
+    //    {
+    //        get
+    //        {
+    //            return DateTime.Today.Day;
+    //        }
+    //    }
+    //    public static string DayName
+    //    {
+    //        get
+    //        {
+    //            return DateTime.Today.DayOfWeek.ToString();
+    //        }
+    //    }
+
+    //    public static string ProjectPath
+    //    {
+    //        get;
+    //        set;
+    //    }
+
+    //}
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Settings settings = new Settings();
+
+            Console.ReadKey();
+        }
+    }
+}

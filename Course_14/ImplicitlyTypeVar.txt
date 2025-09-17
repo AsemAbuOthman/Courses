@@ -1,0 +1,18 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var age = 22;
+            var gpa = 3.05f;
+            var name = "Asem";
+
+            Console.WriteLine("age = {0} gpa = {1} name = {2}", age, gpa, name);
+
+            Console.ReadKey();
+        }
+    }
+}

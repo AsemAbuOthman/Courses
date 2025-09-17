@@ -1,0 +1,4 @@
+select  Make, sum(NumDoors) from Makes
+inner join VehicleDetails on  VehicleDetails.MakeID = Makes.MakeID
+group by Make
+order by Make 

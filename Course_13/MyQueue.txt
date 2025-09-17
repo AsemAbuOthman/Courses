@@ -1,0 +1,51 @@
+#pragma once
+
+#include<iostream>
+#include "clsDblLinkedList.h"
+
+using namespace std;
+
+template <typename t> class clsQueue
+{
+
+protected:
+	clsDblLinkedList<t> DblLinkedList;
+
+public:
+	
+	void push(t value) 
+	{
+		DblLinkedList.InsertAtEnd(value);
+	}
+
+	void pop() 
+	{
+		DblLinkedList.DeleteFirstNode(DblLinkedList.head);
+	}
+
+	int Size() 
+	{
+		return DblLinkedList.Size();
+	}
+
+	t front() 
+	{	
+		return DblLinkedList.GetItem(0);
+	}
+
+	t back() 
+	{
+		return DblLinkedList.GetItem(Size() - 1);
+	}
+
+	bool IsEmpty() 
+	{
+		return DblLinkedList.IsEmpty();
+	}
+
+	void Print() 
+	{
+		DblLinkedList.PrintList();
+	}
+};
+

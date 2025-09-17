@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        struct stStudent 
+        {
+            public string FirstName;
+            public string LastName;
+        }
+
+        static void Main(string[] args)
+        {
+
+            stStudent student1;
+
+            student1.FirstName = "Asem";
+            student1.LastName = "Abu Othman";
+
+            Console.WriteLine(student1.FirstName + " " + student1.LastName);
+
+            stStudent student2 = new stStudent();
+
+            student2.FirstName = "Hassan";
+            student2.LastName = "Abu Othman";
+
+            Console.WriteLine(student2.FirstName + " " + student2.LastName);
+
+            Console.ReadKey();
+
+
+        }
+    }
+}

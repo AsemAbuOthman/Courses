@@ -1,0 +1,80 @@
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    const uint EWX_SHUTDOWN = 0x00000001;
+    const uint EWX_FORCE = 0x00000004;
+    const uint EWX_POWEROFF = 0x00000008;
+
+    const uint TOKEN_ADJUST_PRIVILEGES = 0x0020;
+    const uint TOKEN_QUERY = 0x0008;
+    const uint SE_PRIVILEGE_ENABLED = 0x00000002;
+
+    const string SE_SHUTDOWN_NAME = "SeShutdownPrivilege";
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct LUID
+    {
+        public uint LowPart;
+        public int HighPart;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct TOKEN_PRIVILEGES
+    {
+        public uint PrivilegeCount;
+        public LUID Luid;
+        public uint Attributes;
+    }
+
+    [DllImport("advapi32.dll", SetLastError = true)]
+    static extern bool OpenProcessToken(IntPtr ProcessHandle, uint DesiredAccess, out IntPtr TokenHandle);
+
+    [DllImport("advapi32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+    static extern bool LookupPrivilegeValue(string lpSystemName, string lpName, out LUID lpLuid);
+
+    [DllImport("advapi32.dll", SetLastError = true)]
+    static extern bool AdjustTokenPrivileges(IntPtr TokenHandle, bool DisableAllPrivileges,
+        ref TOKEN_PRIVILEGES NewState, int BufferLength, IntPtr PreviousState, IntPtr ReturnLength);
+
+    [DllImport("user32.dll", SetLastError = true)]
+    static extern bool ExitWindowsEx(uint uFlags, uint dwReason);
+
+    static void Main()
+    {
+        IntPtr hToken;
+        if (!OpenProcessToken(System.Diagnostics.Process.GetCurrentProcess().Handle,
+            TOKEN_ADJUST_PRIVILEGES | TOKEN_QUERY, out hToken))
+        {
+            Console.WriteLine("Failed to open process token.");
+            return;
+        }
+
+        if (!LookupPrivilegeValue(null, SE_SHUTDOWN_NAME, out LUID luid))
+        {
+            Console.WriteLine("Failed to lookup privilege.");
+            return;
+        }
+
+        TOKEN_PRIVILEGES tkp = new TOKEN_PRIVILEGES();
+        tkp.PrivilegeCount = 1;
+        tkp.Luid = luid;
+        tkp.Attributes = SE_PRIVILEGE_ENABLED;
+
+        if (!AdjustTokenPrivileges(hToken, false, ref tkp, 0, IntPtr.Zero, IntPtr.Zero))
+        {
+            Console.WriteLine("Failed to adjust token privileges.");
+            return;
+        }
+
+        if (!ExitWindowsEx(EWX_SHUTDOWN | EWX_FORCE | EWX_POWEROFF, 0))
+        {
+            Console.WriteLine("Shutdown failed.");
+        }
+        else
+        {
+            Console.WriteLine("Shutdown initiated.");
+        }
+    }
+}

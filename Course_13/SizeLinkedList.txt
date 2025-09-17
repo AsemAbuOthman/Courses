@@ -1,0 +1,168 @@
+#pragma once
+
+#include <iostream>
+#include "clsNode.h"
+
+using namespace std;
+
+template <typename t> class clsDblLinkedList : public clsNode<t>
+{
+
+	int listSize = 0;
+
+public:
+
+	clsNode<t> * head = NULL;
+
+	void InsertAtBeginning(t value) 
+	{
+		listSize++;
+
+		clsNode<t> * new_node = new clsNode<t>();
+
+		new_node->value = value;
+		new_node->prev = NULL;
+
+		if (head == NULL)
+		{
+			new_node->next = NULL;
+			head = new_node;
+
+			return;
+		}
+
+		new_node->next = head;
+		head->prev = new_node;
+		head = new_node;
+
+	}
+
+	void PrintList() 
+	{
+		clsNode<t>* Head = head;
+
+		while (Head != NULL)
+		{
+			cout << Head->value << " ";
+			Head = Head->next;
+		}
+		cout << endl;
+	}
+
+	clsNode<t>* Find(t value) 
+	{
+
+		clsNode<t>* Head = head;
+
+		 if (Head == NULL)
+		 {
+			 return NULL;
+		 }
+
+		 while (Head != NULL && Head->value != value)
+		 {
+			 Head = Head->next;
+		 }
+
+		 return Head;
+	}
+
+	void InsertAfter(clsNode<t> * current, t value) 
+	{
+
+		clsNode<t>* new_node = new clsNode<t>();
+
+		new_node->value = value;
+		new_node->prev = current;
+		new_node->next = current->next;
+
+		if (current->next != NULL)
+		{
+			current->next->prev = new_node;
+		}
+
+		current->next = new_node;
+		listSize++;
+	}
+
+	void InsertAtEnd(int value)
+	{
+		listSize++;
+
+		clsNode<t> * new_node = new clsNode<t>();
+
+		new_node->value = value;
+		new_node->next = NULL;
+
+		if (head == NULL)
+		{
+			new_node->prev = NULL;
+			head = new_node;
+		}
+		else
+		{
+			clsNode<t> * current = head;
+
+			while (current->next != NULL)
+			{
+				current = current->next;
+			}
+
+			current->next = new_node;
+			new_node->prev = current;
+
+		}
+	}
+
+	void DeleteNode(clsNode<t> * NodeToDeleted)
+	{
+		if (NodeToDeleted == NULL || head == NULL)
+		{
+			return;
+		}
+
+		if (NodeToDeleted->prev != NULL)
+		{
+			NodeToDeleted->prev->next = NodeToDeleted->next;
+		}
+
+		if (NodeToDeleted->next != NULL)
+		{
+			NodeToDeleted->next->prev = NodeToDeleted->prev;
+
+		}
+
+		if (head == NodeToDeleted)
+		{
+			head = NodeToDeleted->next;
+		}
+
+		delete NodeToDeleted;
+		listSize--;
+	}
+
+	void DeleteFirstNode(clsNode<t>*& head)
+	{
+		if (head == NULL)
+		{
+			return;
+		}
+
+		clsNode<t> * temp = head;
+		head = head->next;
+
+		if (head != NULL)
+		{
+			head->prev = NULL;
+		}
+
+		delete temp;
+		listSize--;
+	}
+
+	int Size() 
+	{
+		return listSize;
+	}
+};
+

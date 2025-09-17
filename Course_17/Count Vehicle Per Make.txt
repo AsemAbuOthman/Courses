@@ -1,0 +1,6 @@
+
+
+select Make, NumbersOfVehicle = count(VehicleDetails.MakeID) from VehicleDetails 
+inner join Makes on Makes.MakeID = VehicleDetails.MakeID
+group by Make
+order by NumbersOfVehicle desc

@@ -1,0 +1,9 @@
+select * from 
+(
+select Vehicle_Display_Name , Year, Age = YEAR(getdate()) - VehicleDetails.Year
+from VehicleDetails
+)R1
+where Age between 15 and 24
+order by Age desc
+
+

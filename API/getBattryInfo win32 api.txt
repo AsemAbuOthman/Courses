@@ -1,0 +1,35 @@
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Structure to hold power status info
+    [StructLayout(LayoutKind.Sequential)]
+    public struct SYSTEM_POWER_STATUS
+    {
+        public byte ACLineStatus;      // 0 = Offline, 1 = Online, 255 = Unknown
+        public byte BatteryFlag;       // 1 = High, 2 = Low, 4 = Critical, 128 = No system battery
+        public byte BatteryLifePercent;// 0-100 (%), 255 = Unknown
+        public byte SystemStatusFlag;
+        public int BatteryLifeTime;    // Seconds of battery life remaining
+        public int BatteryFullLifeTime;// Seconds of full battery life when fully charged
+    }
+
+    [DllImport("kernel32.dll")]
+    public static extern bool GetSystemPowerStatus(out SYSTEM_POWER_STATUS sps);
+
+    static void Main()
+    {
+        if (GetSystemPowerStatus(out SYSTEM_POWER_STATUS status))
+        {
+            Console.WriteLine($"AC Line Status: {(status.ACLineStatus == 1 ? "Online" : status.ACLineStatus == 0 ? "Offline" : "Unknown")}");
+            Console.WriteLine($"Battery Life Percent: {(status.BatteryLifePercent == 255 ? "Unknown" : status.BatteryLifePercent + "%")}");
+            Console.WriteLine($"Battery Life Time (seconds): {(status.BatteryLifeTime == -1 ? "Unknown" : status.BatteryLifeTime.ToString())}");
+            Console.WriteLine($"Battery Full Life Time (seconds): {(status.BatteryFullLifeTime == -1 ? "Unknown" : status.BatteryFullLifeTime.ToString())}");
+        }
+        else
+        {
+            Console.WriteLine("Failed to get battery status.");
+        }
+    }
+}

@@ -1,0 +1,10 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\bin\Debug\Virus.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\bin\Debug\Virus.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\bin\Debug\Virus.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\obj\Debug\Virus.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\obj\Debug\Virus.Form1.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\obj\Debug\Virus.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\obj\Debug\Virus.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\obj\Debug\Virus.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\obj\Debug\Virus.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\Virus\obj\Debug\Virus.pdb

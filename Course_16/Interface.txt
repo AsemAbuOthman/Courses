@@ -1,0 +1,58 @@
+namespace OOP_C_
+{
+    public interface IPerson 
+    {
+        string FirstName { get; set; }
+        string LastName { get; set; }
+        void Introduce();
+        void Print();
+        string To_String();
+
+    }
+
+    public class clsPerson : IPerson
+    {
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public clsPerson() 
+        {
+            FirstName = string.Empty;
+            LastName = string.Empty;    
+        }
+
+        public void Introduce() 
+        {
+            Console.WriteLine("Here is Introduce method");
+        }
+
+        public void Print() 
+        {
+            Console.WriteLine("Here is Print method");
+        }
+
+        public string To_String() 
+        {
+            Console.WriteLine("Here is To_String method");
+
+            return "";
+        }
+        
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            clsPerson Person = new clsPerson();
+
+            Person.FirstName = "Asem";
+            Person.LastName = "Abu Othman";
+            Person.Print();
+            Person.Introduce();
+
+            Console.ReadKey();
+        }
+    }
+}

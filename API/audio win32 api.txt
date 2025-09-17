@@ -1,0 +1,90 @@
+using System;
+using NAudio.CoreAudioApi;
+
+class Program
+{
+    static MMDevice device;
+
+    static void Main()
+    {
+        var deviceEnumerator = new MMDeviceEnumerator();
+        device = deviceEnumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
+
+        bool exit = false;
+        while (!exit)
+        {
+            Console.Clear();
+            DisplayStatus();
+            Console.WriteLine("\nChoose an option:");
+            Console.WriteLine("1 - Increase volume by 10%");
+            Console.WriteLine("2 - Decrease volume by 10%");
+            Console.WriteLine("3 - Set volume to specific percentage");
+            Console.WriteLine("4 - Mute");
+            Console.WriteLine("5 - Unmute");
+            Console.WriteLine("6 - Exit");
+            Console.Write("Your choice: ");
+
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    ChangeVolume(0.1f); // increase 10%
+                    break;
+                case "2":
+                    ChangeVolume(-0.1f); // decrease 10%
+                    break;
+                case "3":
+                    SetVolumeManually();
+                    break;
+                case "4":
+                    SetMute(true);
+                    break;
+                case "5":
+                    SetMute(false);
+                    break;
+                case "6":
+                    exit = true;
+                    break;
+                default:
+                    Console.WriteLine("Invalid option. Press any key to try again.");
+                    Console.ReadKey();
+                    break;
+            }
+        }
+    }
+
+    static void DisplayStatus()
+    {
+        Console.WriteLine("=== Audio Volume Controller ===");
+        Console.WriteLine($"Current volume: {(int)(device.AudioEndpointVolume.MasterVolumeLevelScalar * 100)}%");
+        Console.WriteLine($"Muted: {device.AudioEndpointVolume.Mute}");
+    }
+
+    static void ChangeVolume(float delta)
+    {
+        float current = device.AudioEndpointVolume.MasterVolumeLevelScalar;
+        float newVolume = Math.Clamp(current + delta, 0f, 1f);
+        device.AudioEndpointVolume.MasterVolumeLevelScalar = newVolume;
+    }
+
+    static void SetVolumeManually()
+    {
+        Console.Write("Enter volume percentage (0-100): ");
+        if (int.TryParse(Console.ReadLine(), out int volPercent))
+        {
+            volPercent = Math.Clamp(volPercent, 0, 100);
+            device.AudioEndpointVolume.MasterVolumeLevelScalar = volPercent / 100f;
+        }
+        else
+        {
+            Console.WriteLine("Invalid number. Press any key to continue.");
+            Console.ReadKey();
+        }
+    }
+
+    static void SetMute(bool mute)
+    {
+        device.AudioEndpointVolume.Mute = mute;
+    }
+}

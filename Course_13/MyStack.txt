@@ -1,0 +1,30 @@
+#pragma once
+
+#include<iostream>
+#include "clsDblLinkedList.h"
+#include "clsQueue.h"
+
+using namespace std;
+
+template <typename t> class clsStack : public clsQueue<t>
+{
+
+public:
+
+	void push(t value)
+	{
+		clsQueue<t>::DblLinkedList.InsertAtBeginning(value);
+	}
+
+	t Bottom()
+	{
+		return clsQueue<t>::back();
+	}
+
+	t Top()
+	{
+		return clsQueue<t>::front();
+	}
+
+};
+

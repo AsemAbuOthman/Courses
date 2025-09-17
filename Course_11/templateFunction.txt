@@ -1,0 +1,27 @@
+template <typename T> T Max(T Number1, T Number2)
+{
+    return (Number1 > Number2) ? Number1 : Number2;
+}
+
+template <typename T> T Sum(T Number1, T Number2) 
+{
+    return Number1 + Number2;
+}
+
+int main()
+{
+    //clsMainScreen::ShowMainMenu();
+
+    cout << Max<int>(10, 20) << endl;
+    cout << Max<double>(10.5, 10.9) << endl;
+    cout << Max<char>('a', 'z') << endl;
+
+    cout << endl;
+
+    cout << Sum<int>(10, 20) << endl;
+    cout << Sum<double>(10.5, 10.9) << endl;
+    cout << Sum<string>("Asem ", "Abu Othman") << endl;
+
+
+    return 0;
+}

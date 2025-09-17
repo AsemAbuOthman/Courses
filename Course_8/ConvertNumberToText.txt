@@ -1,0 +1,223 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int ReadNumber()
+{
+	int number = 0;
+
+	cout << "Enter a number ? ";
+	cin >> number;
+
+	return number;
+}
+
+string ConvertDigitsToText(int number)
+{
+	switch (number)
+	{
+	case 0:
+		return "Zero";
+	case 1:
+		return "One";
+	case 2:
+		return "Two";
+	case 3:
+		return "Three";
+	case 4:
+		return "Four";
+	case 5:
+		return "Five";
+	case 6:
+		return "Six";
+	case 7:
+		return "Seven";
+	case 8:
+		return "Eight";
+	case 9:
+		return "Nine";
+	}
+
+}
+
+string ConvertTeensToText(int number)
+{
+	switch (number)
+	{
+	case 10:
+		return "Ten";
+	case 11:
+		return "Eleven";
+	case 12:
+		return "Twilve";
+	case 13:
+		return "Threeteen";
+	case 14:
+		return "Fourteen";
+	case 15:
+		return "Fiveteen";
+	case 16:
+		return "Sixteen";
+	case 17:
+		return "Seventeen";
+	case 18:
+		return "Eightteen";
+	case 19:
+		return "Nineteen";
+	}
+}
+
+string ConvertTensToText(int number)
+{
+	switch (number)
+	{
+	case 20:
+		return "Twinty";
+	case 30:
+		return "Thirty";
+	case 40:
+		return "Fourtiy";
+	case 50:
+		return "Fiftiy";
+	case 60:
+		return "Sixtiy";
+	case 70:
+		return "Seventiy";
+	case 80:
+		return "Eightiy";
+	case 90:
+		return "Nintiy";
+	}
+}
+
+string ConvertFrom99ToText(int number) 
+{
+
+	int digitOfNumber = number % 10;
+	int tenOfNumber = number / 10;
+
+	if (number <= 9)
+	{
+		return ConvertDigitsToText(number);
+	}
+	else if (number <= 19)
+	{
+		return ConvertTeensToText(number);
+
+	}
+	else if (number % 10 == 0 && number <= 90)
+	{
+		return ConvertTensToText(number);
+	}
+
+	return ConvertTensToText(tenOfNumber * 10) + " " + ConvertDigitsToText(digitOfNumber);
+}
+
+string ConvertHundredsToText(int number)
+{
+
+	if (number % 100 == 0)
+	{
+		return ConvertDigitsToText(number / 100) + " Hundred";
+
+	}
+	else if (number <= 99) 
+	{
+		return ConvertFrom99ToText(number % 100);
+	}
+
+	return ConvertDigitsToText(number / 100) + " Hundred " + ConvertFrom99ToText(number % 100);
+}
+
+string ConvertThousndsToText(int number)//999999
+{	
+
+	if (number % 1000 == 0) 
+	{
+		return ConvertHundredsToText(number / 1000) + " Thousnds ";
+	}
+	else if (number <= 999) 
+	{
+		return ConvertHundredsToText(number % 1000);
+	}
+
+	return ConvertHundredsToText(number / 1000) + " Thousnds " + ConvertHundredsToText(number % 1000);
+}
+
+string ConvertMillionsToText(int number)
+{
+
+	if (number % 1000000 == 0)
+	{
+		return ConvertThousndsToText(number / 1000000) + " Millions ";
+	}
+	else if (number <= 999999)
+	{
+		return ConvertThousndsToText(number % 1000000);
+	}
+
+	return ConvertThousndsToText(number / 1000000) + " Millions " + ConvertThousndsToText(number % 1000000);
+
+}
+
+string ConvertBillionsToText(int number)
+{
+
+	if (number % 1000000000 == 0)
+	{
+		return ConvertMillionsToText(number / 1000000000) + " Billions ";
+	}
+	else if (number <= 999999999)
+	{
+		return ConvertMillionsToText(number % 1000000000);
+	}
+
+	return ConvertMillionsToText(number / 1000000000) + " Billions " + ConvertMillionsToText(number % 1000000000);
+
+}
+
+string ConvertNumberToText(int number)
+{
+	string text = "";
+
+	if (number <= 99)
+	{
+		text = ConvertFrom99ToText(number);
+	}
+	else if (number <= 999) 
+	{
+	
+		text = ConvertHundredsToText(number);
+
+	}
+	else if (number <= 999999)
+	{
+		text = ConvertThousndsToText(number);
+
+	}
+	else if (number <= 999999999)
+	{
+	
+		text = ConvertMillionsToText(number);
+
+	}
+	else if (number <= 999999999999)
+	{
+
+		text = ConvertBillionsToText(number);
+
+	}
+
+	return text;
+}
+
+int main()
+{
+
+	int number = ReadNumber();
+
+	cout << endl << ConvertNumberToText(number) << endl;
+
+	return 0;
+}

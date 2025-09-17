@@ -1,0 +1,13 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\bin\Debug\TetsMyFirstClassLibrary.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\bin\Debug\TetsMyFirstClassLibrary.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

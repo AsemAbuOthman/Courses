@@ -1,0 +1,10 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\bin\Debug\BoyGirlBookPen.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\bin\Debug\BoyGirlBookPen.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\bin\Debug\BoyGirlBookPen.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\obj\Debug\BoyGirlBookPen.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\obj\Debug\BoyGirlBookPen.frmImages.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\obj\Debug\BoyGirlBookPen.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\obj\Debug\BoyGirlBookPen.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\obj\Debug\BoyGirlBookPen.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\obj\Debug\BoyGirlBookPen.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\BoyGirlBookPen\obj\Debug\BoyGirlBookPen.pdb

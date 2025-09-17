@@ -1,0 +1,77 @@
+namespace OOP_C_
+{
+    class clsPerson 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }  
+        public int Age { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+
+        clsPerson(int ID, string Name, int Age)
+        {
+            this.ID = ID;
+            this.Name = Name;
+            this.Age = Age;
+        }
+
+        public static clsPerson Find(int ID)
+        {
+            if (ID == 3200100)
+            {
+                return new clsPerson(ID, "Asem Abu Othman", 22);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static clsPerson Find(string Username, string Password)
+        {
+            if (Username == "asemabuothman" && Password == "0000")
+            {
+                return new clsPerson(3200100, "Asem Abu Othman", 22);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            clsPerson person1 = clsPerson.Find(3200100);
+
+            if (person1 != null)
+            {
+                Console.WriteLine($"ID   : {person1.ID}");
+                Console.WriteLine($"Name : {person1.Name}");
+                Console.WriteLine($"Age  : {person1.Age}");
+            }
+            else 
+            {
+                Console.WriteLine("User with this information is not exist plz try another one");
+            }
+
+            clsPerson person2 = clsPerson.Find("asemabuothman", "0000");
+
+            if (person2 != null)
+            {
+                Console.WriteLine($"ID   : {person2.ID}");
+                Console.WriteLine($"Name : {person2.Name}");
+                Console.WriteLine($"Age  : {person2.Age}");
+            }
+            else
+            {
+                Console.WriteLine("User with this information is not exist plz try another one");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

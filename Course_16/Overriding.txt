@@ -1,0 +1,30 @@
+namespace OOP_C_
+{
+    public class clsA 
+    {
+        public virtual void Print() 
+        {
+            Console.WriteLine("Hi, I'm the print method from the base calss A");
+        }
+    }
+
+    public class clsB : clsA 
+    {
+        public override void Print() 
+        {
+            Console.WriteLine("Hi, I'm the print method from the derived calss B");
+            base.Print();
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            clsB obj = new clsB();
+            obj.Print();
+
+            Console.ReadKey();
+        }
+    }
+}

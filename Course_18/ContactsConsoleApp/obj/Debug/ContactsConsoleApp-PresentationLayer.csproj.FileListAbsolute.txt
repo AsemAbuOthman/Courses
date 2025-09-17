@@ -1,0 +1,12 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\bin\Debug\ContactsConsoleApp.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\bin\Debug\ContactsConsoleApp.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\bin\Debug\ContactsConsoleApp.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\bin\Debug\ContactsBuisnessLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\bin\Debug\ContactsDataLayer.dll
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\bin\Debug\ContactsBuisnessLayer.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\bin\Debug\ContactsDataLayer.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\obj\Debug\ContactsConsoleApp-PresentationLayer.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\obj\Debug\ContactsConsoleApp-PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\obj\Debug\ContactsConsoleApp-PresentationLayer.csproj.CopyComplete
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\obj\Debug\ContactsConsoleApp.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ContactsConsoleApp\obj\Debug\ContactsConsoleApp.pdb

@@ -1,0 +1,14 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("{0} {1}", "My Name is:", "Asem Abu Othman");
+            Console.WriteLine("I'm studing C# in {0}", "Programming Advices");
+            Console.ReadKey();
+        }
+    }
+}

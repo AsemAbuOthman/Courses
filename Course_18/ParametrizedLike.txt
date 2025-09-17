@@ -1,0 +1,324 @@
+using System;
+using System.Data.SqlClient;
+
+namespace ConsoleConn
+{
+    internal class Program
+    {
+        static string ConnString = "Server = .; Database = ContactsDB; Integrated Security=SSPI;Persist Security Info=False ";
+
+        static void PrintAllContacts() 
+        {
+
+            string query = "select * from Contacts;";
+
+            SqlConnection Conn = new SqlConnection(ConnString);
+
+            SqlCommand Cmd = new SqlCommand(query, Conn);
+
+            try 
+            {
+                Conn.Open();
+
+
+                SqlDataReader reader = Cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ContactID = (int)reader["ContactID"];
+                    string FirstName = (string)reader["FirstName"];
+                    string LastName = (string)reader["LastName"];
+                    string Email = (string)reader["Email"];
+                    string Phone = (string)reader["Phone"];
+                    string Address = (string)reader["Address"];
+                    int CountryID = (int)reader["CountryID"];
+
+                    Console.WriteLine($"Contact ID : {ContactID}");
+                    Console.WriteLine($"First Name : {FirstName}");
+                    Console.WriteLine($"Last Name  : {LastName}");
+                    Console.WriteLine($"Email      : {Email}");
+                    Console.WriteLine($"Phone      : {Phone}");
+                    Console.WriteLine($"Address    : {Address}");
+                    Console.WriteLine($"Country ID : {CountryID}");
+
+                    Console.WriteLine();
+
+                }
+
+                reader.Close();
+                Conn.Close();
+
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine($"Error : {0}", ex.Message);
+            }
+        }
+
+        static void PrintAllContactsWithFirstName(string firstName)
+        {
+
+            string query = "select * from Contacts where FirstName = @FirstName;";
+
+            SqlConnection Conn = new SqlConnection(ConnString);
+
+            SqlCommand Cmd = new SqlCommand(query, Conn);
+
+            Cmd.Parameters.AddWithValue("@FirstName", firstName);
+
+            try
+            {
+                Conn.Open();
+
+
+                SqlDataReader reader = Cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ContactID = (int)reader["ContactID"];
+                    string FirstName = (string)reader["FirstName"];
+                    string LastName = (string)reader["LastName"];
+                    string Email = (string)reader["Email"];
+                    string Phone = (string)reader["Phone"];
+                    string Address = (string)reader["Address"];
+                    int CountryID = (int)reader["CountryID"];
+
+                    Console.WriteLine($"Contact ID : {ContactID}");
+                    Console.WriteLine($"First Name : {FirstName}");
+                    Console.WriteLine($"Last Name  : {LastName}");
+                    Console.WriteLine($"Email      : {Email}");
+                    Console.WriteLine($"Phone      : {Phone}");
+                    Console.WriteLine($"Address    : {Address}");
+                    Console.WriteLine($"Country ID : {CountryID}");
+
+                    Console.WriteLine();
+
+                }
+
+                reader.Close();
+                Conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {0}", ex.Message);
+            }
+        }
+
+        static void SearchContactsStartsWith(string StartWith)
+        {
+
+            string query = "select * from Contacts where FirstName like '' + @StartWith + '%' ;";
+
+            SqlConnection Conn = new SqlConnection(ConnString); 
+
+            SqlCommand Cmd = new SqlCommand(query, Conn);
+
+            Cmd.Parameters.AddWithValue("@StartWith", StartWith);
+
+            try
+            {
+                Conn.Open();
+
+
+                SqlDataReader reader = Cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ContactID = (int)reader["ContactID"];
+                    string FirstName = (string)reader["FirstName"];
+                    string LastName = (string)reader["LastName"];
+                    string Email = (string)reader["Email"];
+                    string Phone = (string)reader["Phone"];
+                    string Address = (string)reader["Address"];
+                    int CountryID = (int)reader["CountryID"];
+
+                    Console.WriteLine($"Contact ID : {ContactID}");
+                    Console.WriteLine($"First Name : {FirstName}");
+                    Console.WriteLine($"Last Name  : {LastName}");
+                    Console.WriteLine($"Email      : {Email}");
+                    Console.WriteLine($"Phone      : {Phone}");
+                    Console.WriteLine($"Address    : {Address}");
+                    Console.WriteLine($"Country ID : {CountryID}");
+
+                    Console.WriteLine();
+
+                }
+
+                reader.Close();
+                Conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {0}", ex.Message);
+            }
+        }
+
+        static void SearchContactsEndsWith(string EndsWith)
+        {
+
+            string query = "select * from Contacts where FirstName like '%' + @EndsWith + '' ;";
+
+            SqlConnection Conn = new SqlConnection(ConnString);
+
+            SqlCommand Cmd = new SqlCommand(query, Conn);
+
+            Cmd.Parameters.AddWithValue("@EndsWith", EndsWith);
+
+            try
+            {
+                Conn.Open();
+
+
+                SqlDataReader reader = Cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ContactID = (int)reader["ContactID"];
+                    string FirstName = (string)reader["FirstName"];
+                    string LastName = (string)reader["LastName"];
+                    string Email = (string)reader["Email"];
+                    string Phone = (string)reader["Phone"];
+                    string Address = (string)reader["Address"];
+                    int CountryID = (int)reader["CountryID"];
+
+                    Console.WriteLine($"Contact ID : {ContactID}");
+                    Console.WriteLine($"First Name : {FirstName}");
+                    Console.WriteLine($"Last Name  : {LastName}");
+                    Console.WriteLine($"Email      : {Email}");
+                    Console.WriteLine($"Phone      : {Phone}");
+                    Console.WriteLine($"Address    : {Address}");
+                    Console.WriteLine($"Country ID : {CountryID}");
+
+                    Console.WriteLine();
+
+                }
+
+                reader.Close();
+                Conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {0}", ex.Message);
+            }
+        }
+
+        static void SearchContactsContains(string Contains)
+        {
+
+            string query = "select * from Contacts where FirstName like '%' + @Contains + '%' ;";
+
+            SqlConnection Conn = new SqlConnection(ConnString);
+
+            SqlCommand Cmd = new SqlCommand(query, Conn);
+
+            Cmd.Parameters.AddWithValue("@Contains", Contains);
+
+            try
+            {
+                Conn.Open();
+
+
+                SqlDataReader reader = Cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ContactID = (int)reader["ContactID"];
+                    string FirstName = (string)reader["FirstName"];
+                    string LastName = (string)reader["LastName"];
+                    string Email = (string)reader["Email"];
+                    string Phone = (string)reader["Phone"];
+                    string Address = (string)reader["Address"];
+                    int CountryID = (int)reader["CountryID"];
+
+                    Console.WriteLine($"Contact ID : {ContactID}");
+                    Console.WriteLine($"First Name : {FirstName}");
+                    Console.WriteLine($"Last Name  : {LastName}");
+                    Console.WriteLine($"Email      : {Email}");
+                    Console.WriteLine($"Phone      : {Phone}");
+                    Console.WriteLine($"Address    : {Address}");
+                    Console.WriteLine($"Country ID : {CountryID}");
+
+                    Console.WriteLine();
+
+                }
+
+                reader.Close();
+                Conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {0}", ex.Message);
+            }
+        }
+
+        static void PrintAllContactsWithFirstNameAndCountry(string firstName, int countryID)
+        {
+
+            string query = "select * from Contacts where FirstName = @FirstName and CountryID = @CountryID;";
+
+            SqlConnection Conn = new SqlConnection(ConnString);
+
+            SqlCommand Cmd = new SqlCommand(query, Conn);
+
+            Cmd.Parameters.AddWithValue("@FirstName", firstName);
+            Cmd.Parameters.AddWithValue("@CountryID", countryID);
+
+            try
+            {
+                Conn.Open();
+
+
+                SqlDataReader reader = Cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ContactID = (int)reader["ContactID"];
+                    string FirstName = (string)reader["FirstName"];
+                    string LastName = (string)reader["LastName"];
+                    string Email = (string)reader["Email"];
+                    string Phone = (string)reader["Phone"];
+                    string Address = (string)reader["Address"];
+                    int CountryID = (int)reader["CountryID"];
+
+                    Console.WriteLine($"Contact ID : {ContactID}");
+                    Console.WriteLine($"First Name : {FirstName}");
+                    Console.WriteLine($"Last Name  : {LastName}");
+                    Console.WriteLine($"Email      : {Email}");
+                    Console.WriteLine($"Phone      : {Phone}");
+                    Console.WriteLine($"Address    : {Address}");
+                    Console.WriteLine($"Country ID : {CountryID}");
+
+                    Console.WriteLine();
+
+                }
+
+                reader.Close();
+                Conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {0}", ex.Message);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            //Console.WriteLine(@"-------Start With 'j'");
+            //SearchContactsStartsWith("j");
+
+            //Console.WriteLine(@"-------End With 'ne'");
+            //SearchContactsEndsWith("ne");
+
+
+            //Console.WriteLine(@"-------Start With 'ae'");
+            //SearchContactsContains("ae");
+
+            Console.ReadKey();
+        }
+    }
+}

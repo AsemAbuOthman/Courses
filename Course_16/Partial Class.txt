@@ -1,0 +1,16 @@
+using System;
+
+
+internal class Program
+{
+    static void Main(string[] args)
+    {   
+        MyClass obj = new MyClass();
+
+        obj.MyMethod1();
+        obj.MyMethod2();
+
+        Console.ReadKey();
+    }
+}
+

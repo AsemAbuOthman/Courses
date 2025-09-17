@@ -1,0 +1,168 @@
+#pragma once
+
+#include <iostream>
+
+using namespace std;
+
+template <typename t> class clsDynamicArray
+{
+
+private:
+	int _Size = 0;
+	t* tempArray = NULL;
+
+public:
+	t* Array = NULL;
+
+	clsDynamicArray(int size)
+	{
+		if (size < 0)
+			size = 0;
+
+		_Size = size;
+		Array = new t[_Size];
+	}
+
+	~clsDynamicArray()
+	{
+		delete[] Array;
+	}
+
+	bool SetItem(int index, t item)
+	{
+		if (index >= _Size || _Size < 0) {
+
+			return false;
+		}
+
+		Array[index] = item;
+
+		return true;
+	}
+
+	bool IsEmpty()
+	{
+		return _Size == 0 ? true : false;
+	}
+
+	int Size()
+	{
+		return _Size;
+	}
+
+	void Resize(int newSize)
+	{
+		if (newSize < 0)
+		{
+			_Size = 0;
+		}
+
+		tempArray = new t[newSize];
+
+		if (newSize < _Size)
+		{
+			_Size = newSize;
+		}
+
+		for (int i = 0; i < _Size; i++) {
+
+			tempArray[i] = Array[i];
+		}
+
+		_Size = newSize;
+
+		delete[] Array;
+		Array = tempArray;
+	}
+
+	t GetItem(int index)
+	{
+		return Array[index];
+	}
+
+	void Reverse()
+	{
+		t temp;
+
+		for (int i = 0; i < _Size / 2; i++)
+		{
+			temp = Array[_Size - i - 1];
+			Array[_Size - i - 1] = Array[i];
+			Array[i] = temp;
+		}
+	}
+
+	void Clear()
+	{
+		delete[] Array;
+		Array = tempArray;
+		_Size = 0;
+	}
+
+	bool DeleteItemAt(int index) 
+	{
+		if (index >= _Size || index < 0) 
+		{
+			return false;
+		}
+
+		_Size--;
+
+		t* tempArray = new t[_Size];
+
+		for (int i = 0; i < index; i++)
+		{
+			tempArray[i] = Array[i];
+		}
+
+		for (int i = index + 1; i < _Size + 1; i++)
+		{
+			tempArray[i - 1] = Array[i];
+		}
+
+		delete[] Array;
+		Array = tempArray;
+
+		return true;
+	}
+
+	bool DeleteFirstItem() 
+	{
+		return DeleteItemAt(0);
+	}
+
+	bool DeleteLastItem()
+	{
+		return DeleteItemAt(_Size - 1);
+	}
+
+	int Find(t item) 
+	{
+		for (int i = 0; i < _Size; i++)
+		{
+			if (Array[i] == item)
+			{
+				return i;
+			}
+		}
+
+		return -1;
+	}
+
+	bool DeleteItem(t item) 
+	{
+		return DeleteItemAt(Find(item));
+	}
+
+	void PrintList() 
+	{
+
+		for (int i = 0; i < _Size; i++) 
+		{
+			cout << Array[i] << " ";
+		}
+
+		cout << endl;
+	}
+};
+

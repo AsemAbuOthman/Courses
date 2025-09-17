@@ -1,0 +1,7 @@
+select Vehicle_Display_Name, NumDoors, 
+case
+	when NumDoors = 2 then  'Two Doors'
+	when NumDoors = 4 then 'Four Doors'
+	when NumDoors is null then 'Not Set'
+end as DoorDescription
+from VehicleDetails;

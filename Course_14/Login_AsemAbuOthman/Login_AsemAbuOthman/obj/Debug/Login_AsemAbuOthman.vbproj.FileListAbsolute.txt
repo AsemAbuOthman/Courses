@@ -1,0 +1,16 @@
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.vbproj.AssemblyReference.cache
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.frmLogin.resources
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.Resources.resources
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.vbproj.GenerateResource.cache
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.vbproj.CoreCompileInputs.cache
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\bin\Debug\Login_AsemAbuOthman.exe.config
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\bin\Debug\Login_AsemAbuOthman.exe
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\bin\Debug\Login_AsemAbuOthman.pdb
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\bin\Debug\Login_AsemAbuOthman.xml
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.exe
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.xml
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.pdb
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.frmEdit.resources
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.frmForget.resources
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.frmShowInfo.resources
+C:\Users\asimw\source\repos\Login_AsemAbuOthman\Login_AsemAbuOthman\obj\Debug\Login_AsemAbuOthman.frmOrder.resources

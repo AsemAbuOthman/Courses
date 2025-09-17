@@ -1,0 +1,48 @@
+int main() {
+
+    vector<string> documents = ReadDocumentLines("IMDB Dataset.txt", 100);
+
+    map<string, double> termIDF;
+    
+    ofstream csvFile("imdb_reviews_features.csv");
+
+    for (const auto& term : termIDF) {
+
+        csvFile << term.first << ",";
+
+    }
+
+    csvFile << endl;
+
+
+    map<int, map<string, double>> tfidfMatrix;
+
+    ComputeTFIDF(documents, termIDF, tfidfMatrix);
+
+    for (int i = 0; i < documents.size(); ++i) {
+
+        for (const auto& term : termIDF) {
+
+            auto it = tfidfMatrix[i].find(term.first);
+
+            if (it != tfidfMatrix[i].end()) {
+
+                csvFile << it->second << ",";
+
+            }
+
+            else {
+
+                csvFile << "0,";
+            }
+        }
+
+        csvFile << endl;
+    }
+
+    cout << "\nDone\n\n";
+
+    csvFile.close();
+
+    return 0;
+}

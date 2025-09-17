@@ -1,0 +1,42 @@
+namespace OOP_C_
+{
+
+    static class Settings 
+    {
+        public static int DayInNumber 
+        {
+            get 
+            {
+                return DateTime.Today.Day;
+            }
+        } 
+
+        public static string DayName 
+        {
+            get 
+            {
+                return DateTime.Today.DayOfWeek.ToString();
+            }
+        }
+
+        public static string ProjectPath 
+        {
+            get;
+            set;
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Settings.DayInNumber);
+            Console.WriteLine(Settings.DayName);
+
+            Settings.ProjectPath = @"C:\ProjectPath\";
+            Console.WriteLine(Settings.ProjectPath);
+
+            Console.ReadKey();
+        }
+    }
+}

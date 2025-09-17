@@ -1,0 +1,10 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\bin\Debug\DrawingProject.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\bin\Debug\DrawingProject.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\bin\Debug\DrawingProject.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\obj\Debug\DrawingProject.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\obj\Debug\DrawingProject.Form1.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\obj\Debug\DrawingProject.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\obj\Debug\DrawingProject.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\obj\Debug\DrawingProject.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\obj\Debug\DrawingProject.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\DrawingProject\obj\Debug\DrawingProject.pdb

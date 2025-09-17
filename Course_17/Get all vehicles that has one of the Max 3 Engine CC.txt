@@ -1,0 +1,11 @@
+
+select VehicleDetails.Vehicle_Display_Name
+from VehicleDetails
+where VehicleDetails.Engine_CC in 
+(
+
+select distinct top 3 VehicleDetails.Engine_CC  
+from VehicleDetails
+order by VehicleDetails.Engine_CC desc
+
+)

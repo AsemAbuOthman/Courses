@@ -1,0 +1,31 @@
+namespace OOP_C_
+{
+    class clsCar 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }    
+        public double Price { get; set; }
+
+        public clsCar(int ID, string Name, double Price) 
+        {
+            this.ID = ID;
+            this.Name = Name;
+            this.Price = Price;
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            clsCar car1 = new clsCar(3200100, "Chorvet", 60000);
+
+            Console.WriteLine("ID   : " + car1.ID);
+            Console.WriteLine("Name : " + car1.Name);
+            Console.WriteLine("Price: " + car1.Price);
+
+            Console.ReadKey();
+        }
+    }
+}

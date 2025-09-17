@@ -1,0 +1,80 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            byte value1 = 255;
+
+            Console.WriteLine("Byte: {0}", value1);
+            Console.WriteLine("Min = {0} Max = {1}", Byte.MinValue, Byte.MaxValue);
+
+
+            sbyte value2 = -127;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nsByte: {0}", value2);
+            Console.WriteLine("Min = {0} Max = {1}", SByte.MinValue, SByte.MaxValue);
+
+            short value3 = 32000;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nShort: {0}", value3);
+            Console.WriteLine("Min = {0} Max = {1}", Int16.MinValue, Int16.MaxValue);
+
+            ushort value4 = 64000;
+
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nuShort: {0}", value4);
+            Console.WriteLine("Min = {0} Max = {1}", UInt16.MinValue, UInt16.MaxValue);
+
+            int value5 = 270000000;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nInt: {0}", value5);
+            Console.WriteLine("Min = {0} Max = {1}", Int32.MinValue, Int32.MaxValue);
+
+            uint value6 = 270000000 * 2;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nuInt: {0}", value6);
+            Console.WriteLine("Min = {0} Max = {1}", UInt32.MinValue, UInt32.MaxValue);
+
+            long value7 = 630000000000000000 * 10;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nLong: {0}", value7);
+            Console.WriteLine("Min = {0} Max = {1}", Int64.MinValue, Int64.MaxValue);
+
+            ulong value8 = 630000000000000000 * 14;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nuLong: {0}", value8);
+            Console.WriteLine("Min = {0} Max = {1}", UInt64.MinValue, UInt64.MaxValue);
+
+            float value9 = 1.23456f;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nFloat: {0}", value9);
+            Console.WriteLine("Min = {0} Max = {1}", Single.MinValue, Single.MaxValue);
+
+            double value10 = 1.23456789e+100d;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nDouble: {0}", value10);
+            Console.WriteLine("Min = {0} Max = {1}", Double.MinValue, Double.MaxValue);
+
+            decimal value11 = 1.234567891215464564896486456234567891215464564896486456m;
+
+            Console.WriteLine("------------------------");
+            Console.WriteLine("\nDecimal: {0}", value11);
+            Console.WriteLine("Min = {0} Max = {1}", Decimal.MinValue, Decimal.MaxValue);
+
+            Console.ReadKey();
+        }
+    }
+}

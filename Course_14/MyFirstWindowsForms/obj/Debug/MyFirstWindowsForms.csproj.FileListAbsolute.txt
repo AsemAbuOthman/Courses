@@ -1,0 +1,52 @@
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\bin\Debug\MyFirstWindowsForms.exe.config
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\bin\Debug\MyFirstWindowsForms.exe
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\bin\Debug\MyFirstWindowsForms.pdb
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.exe
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.pdb
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frm1.resources
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMain.resources
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMessageBox.resources
+C:\Users\asimw\OneDrive\Desktop\C++\Course_14\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmChkRadioGroup.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\bin\Debug\MyFirstWindowsForms.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\bin\Debug\MyFirstWindowsForms.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\bin\Debug\MyFirstWindowsForms.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frm1.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmChkRadioGroup.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMain.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMessageBox.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.Properties.Resources.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.csproj.GenerateResource.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMoreAboutTextBox.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmPictureBox.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMaskedTextBox.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmComboBox.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmLinkLabel.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmCheckBoxList.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmDateTimePicker.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMonthCalender.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmTimer.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmNotifyIcon.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmTreeView.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmProgressBar.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmListView.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmErrorProvider.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmTrackBar.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmNumericUpDown.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmTabControl.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmPanel.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmColorDialoges.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmFontDialog.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmFileSaveDialog.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmOpenFileDialog.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmBrowseFileDialog.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMdiContinter.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmMenuStrip.resources
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_14 in progress\MyFirstWindowsForms\obj\Debug\MyFirstWindowsForms.frmContextMenu.resources

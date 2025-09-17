@@ -1,0 +1,71 @@
+namespace OOP_C_
+{
+    class clsPerson 
+    {
+        public string FirstName;
+        public string LastName;
+        public static string Status;
+        public clsPerson() 
+        {
+        
+        }
+        public clsPerson(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
+        public void FullName() 
+        {
+            Console.WriteLine(FirstName + " " + LastName);
+        }
+    }
+
+    class clsStudent : clsPerson
+    {
+        public int ID;
+        public string Department;
+        public float GPA;
+
+        public clsStudent() 
+        {
+        
+        }
+
+        public clsStudent(int id, string firstName, string lastName, string department, float gpa) 
+            :  base(firstName,  lastName)
+        {
+            ID = id;
+            Department = department;
+            GPA = gpa;
+        }
+
+        public void PrintInfo() 
+        {
+            Console.WriteLine($"ID          : {ID}");
+
+            Console.Write("Name        : ");
+            FullName();
+
+            Console.WriteLine($"Department  : {Department}");
+            Console.WriteLine($"GPA         : {GPA}");
+            Console.WriteLine($"Status      : {Status}");
+
+
+        }
+
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            clsStudent student1 = new clsStudent(3200100, "Asem", "Abu Othman", "IT", 3.06f);
+            clsStudent.Status = "Active";
+            student1.PrintInfo();
+
+            Console.ReadKey();
+        }
+    }
+}

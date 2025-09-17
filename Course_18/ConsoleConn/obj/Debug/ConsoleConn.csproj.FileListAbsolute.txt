@@ -1,0 +1,7 @@
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ConsoleConn\bin\Debug\ConsoleConn.exe.config
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ConsoleConn\bin\Debug\ConsoleConn.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ConsoleConn\bin\Debug\ConsoleConn.pdb
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ConsoleConn\obj\Debug\ConsoleConn.csproj.AssemblyReference.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ConsoleConn\obj\Debug\ConsoleConn.csproj.CoreCompileInputs.cache
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ConsoleConn\obj\Debug\ConsoleConn.exe
+C:\Users\asimw\OneDrive\Desktop\Courses\Course_16\ConsoleConn\obj\Debug\ConsoleConn.pdb

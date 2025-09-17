@@ -1,0 +1,5 @@
+
+select distinct Makes.MakeID, Make,  SubModelName from VehicleDetails
+inner join Makes on Makes.MakeID = VehicleDetails.MakeID
+inner join SubModels on SubModels.SubModelID = VehicleDetails.SubModelID
+where SubModelName = 'Elite'
